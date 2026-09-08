@@ -1,0 +1,30 @@
+# Starting universe: ~25 liquid names. "volatile: true" names get smaller position sizes.
+# Edit freely; the screener re-reads this every run.
+stocks:
+  # Mega-cap / liquid core
+  - {symbol: AAPL,  sector: Tech,        volatile: false}
+  - {symbol: MSFT,  sector: Tech,        volatile: false}
+  - {symbol: NVDA,  sector: Semis,       volatile: true}
+  - {symbol: AMD,   sector: Semis,       volatile: true}
+  - {symbol: AMZN,  sector: Consumer,    volatile: false}
+  - {symbol: GOOGL, sector: Tech,        volatile: false}
+  - {symbol: META,  sector: Tech,        volatile: false}
+  - {symbol: TSLA,  sector: Auto/EV,     volatile: true}
+  - {symbol: NFLX,  sector: Media,       volatile: false}
+  - {symbol: AVGO,  sector: Semis,       volatile: false}
+  - {symbol: JPM,   sector: Banks,       volatile: false}
+  - {symbol: XOM,   sector: Energy,      volatile: false}
+  - {symbol: UNH,   sector: Health,      volatile: false}
+  - {symbol: COST,  sector: Retail,      volatile: false}
+  - {symbol: BA,    sector: Industrial,  volatile: true}
+  # Higher-beta / momentum names (the "volatile bucket")
+  - {symbol: PLTR,  sector: Software,    volatile: true}
+  - {symbol: COIN,  sector: Crypto,      volatile: true}
+  - {symbol: MSTR,  sector: Crypto,      volatile: true}
+  - {symbol: SMCI,  sector: Hardware,    volatile: true}
+  - {symbol: ARM,   sector: Semis,       volatile: true}
+  - {symbol: SOFI,  sector: Fintech,     volatile: true}
+  - {symbol: RIVN,  sector: Auto/EV,     volatile: true}
+  - {symbol: MARA,  sector: Crypto,      volatile: true}
+  - {symbol: SHOP,  sector: Software,    volatile: true}
+  - {symbol: UBER,  sector: Transport,   volatile: false}

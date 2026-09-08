@@ -1,0 +1,12 @@
+[Unit]
+Description=Stock Trader dashboard (password-protected)
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/stocktrader
+ExecStart=/opt/stocktrader/.venv/bin/python /opt/stocktrader/vps/serve.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

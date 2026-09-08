@@ -1,0 +1,2007 @@
+# Auto-built 2026-09-03 14:47 by build_universe.py — top 500 US stocks by 30d dollar volume.
+# Do not edit by hand; edit watchlist.yaml for names you always want included / volatile tags.
+stocks:
+- symbol: NVDA
+  name: NVIDIA Corporation Common Stock
+  sector: Semis
+  volatile: true
+- symbol: MU
+  name: Micron Technology, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: SNDK
+  name: Sandisk Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: AAPL
+  name: Apple Inc. Common Stock
+  sector: Tech
+  volatile: false
+- symbol: MSFT
+  name: Microsoft Corporation Common Stock
+  sector: Tech
+  volatile: false
+- symbol: AMZN
+  name: Amazon.com, Inc. Common Stock
+  sector: Consumer
+  volatile: false
+- symbol: META
+  name: Meta Platforms, Inc. Class A Common Stock
+  sector: Tech
+  volatile: false
+- symbol: SPCX
+  name: Space Exploration Technologies Corp. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: GOOGL
+  name: Alphabet Inc. Class A Common Stock
+  sector: Tech
+  volatile: false
+- symbol: INTC
+  name: Intel Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: TSLA
+  name: Tesla, Inc. Common Stock
+  sector: Auto/EV
+  volatile: true
+- symbol: AMD
+  name: Advanced Micro Devices, Inc. Common Stock
+  sector: Semis
+  volatile: true
+- symbol: AVGO
+  name: Broadcom Inc. Common Stock
+  sector: Semis
+  volatile: false
+- symbol: GOOG
+  name: Alphabet Inc. Class C Capital Stock
+  sector: auto
+  volatile: false
+- symbol: TSM
+  name: Taiwan Semiconductor Manufacturing Company Ltd.
+  sector: auto
+  volatile: false
+- symbol: PLTR
+  name: Palantir Technologies Inc. Class A Common Stock
+  sector: Software
+  volatile: true
+- symbol: STX
+  name: Seagate Technology Holdings PLC Ordinary Shares (Ireland)
+  sector: auto
+  volatile: true
+- symbol: NFLX
+  name: Netflix, Inc. Common Stock
+  sector: Media
+  volatile: false
+- symbol: AMAT
+  name: Applied Materials, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: LITE
+  name: Lumentum Holdings Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: WDC
+  name: Western Digital Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: NBIS
+  name: Nebius Group N.V. Class A Ordinary Shares
+  sector: auto
+  volatile: true
+- symbol: LLY
+  name: Eli Lilly & Co.
+  sector: auto
+  volatile: false
+- symbol: ASML
+  name: ASML Holding N.V. New York Registry Shares
+  sector: auto
+  volatile: false
+- symbol: BAC
+  name: Bank of America Corporation
+  sector: auto
+  volatile: false
+- symbol: ORCL
+  name: Oracle Corp
+  sector: auto
+  volatile: true
+- symbol: MRVL
+  name: Marvell Technology, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CRM
+  name: Salesforce, Inc.
+  sector: auto
+  volatile: false
+- symbol: WMT
+  name: Walmart Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: LRCX
+  name: Lam Research Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: DELL
+  name: Dell Technologies Inc.
+  sector: auto
+  volatile: true
+- symbol: GEV
+  name: GE Vernova Inc.
+  sector: auto
+  volatile: true
+- symbol: NOW
+  name: SERVICENOW, INC.
+  sector: auto
+  volatile: true
+- symbol: CAT
+  name: Caterpillar Inc.
+  sector: auto
+  volatile: false
+- symbol: BE
+  name: Bloom Energy Corporation
+  sector: auto
+  volatile: true
+- symbol: V
+  name: VISA Inc.
+  sector: auto
+  volatile: false
+- symbol: PANW
+  name: Palo Alto Networks, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CSCO
+  name: Cisco Systems, Inc. Common Stock (DE)
+  sector: auto
+  volatile: false
+- symbol: MA
+  name: Mastercard Incorporated
+  sector: auto
+  volatile: false
+- symbol: SNOW
+  name: Snowflake Inc.
+  sector: auto
+  volatile: false
+- symbol: COHR
+  name: Coherent Corp.
+  sector: auto
+  volatile: true
+- symbol: KO
+  name: Coca-Cola Company
+  sector: auto
+  volatile: false
+- symbol: KLAC
+  name: KLA Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: BSX
+  name: Boston Scientific Corp.
+  sector: auto
+  volatile: false
+- symbol: UNH
+  name: UNITEDHEALTH GROUP INCORPORATED (Delaware)
+  sector: Health
+  volatile: false
+- symbol: APP
+  name: Applovin Corporation Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: TMO
+  name: Thermo Fisher Scientific, Inc.
+  sector: auto
+  volatile: false
+- symbol: JNJ
+  name: Johnson & Johnson
+  sector: auto
+  volatile: false
+- symbol: TXN
+  name: Texas Instruments Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: UBER
+  name: Uber Technologies, Inc.
+  sector: Transport
+  volatile: false
+- symbol: INTU
+  name: Intuit Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: GLW
+  name: Corning Incorporated
+  sector: auto
+  volatile: true
+- symbol: VRT
+  name: Vertiv Holdings Co Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: SMCI
+  name: Super Micro Computer, Inc. Common Stock
+  sector: Hardware
+  volatile: true
+- symbol: JPM
+  name: JPMorgan Chase & Co.
+  sector: Banks
+  volatile: false
+- symbol: GS
+  name: Goldman Sachs Group Inc.
+  sector: auto
+  volatile: false
+- symbol: DHR
+  name: Danaher Corporation
+  sector: auto
+  volatile: false
+- symbol: XOM
+  name: ExxonMobil Holdings Corporation
+  sector: Energy
+  volatile: false
+- symbol: CRWV
+  name: CoreWeave, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: HOOD
+  name: Robinhood Markets, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: ANET
+  name: Arista Networks
+  sector: auto
+  volatile: true
+- symbol: VZ
+  name: Verizon Communications
+  sector: auto
+  volatile: false
+- symbol: T
+  name: AT&T Inc.
+  sector: auto
+  volatile: false
+- symbol: SPOT
+  name: Spotify Technology S.A.
+  sector: auto
+  volatile: false
+- symbol: CRWD
+  name: CrowdStrike Holdings, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: MRNA
+  name: Moderna, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: MSTR
+  name: Strategy Inc Common Stock Class A
+  sector: Crypto
+  volatile: true
+- symbol: IBM
+  name: International Business Machines Corporation
+  sector: auto
+  volatile: false
+- symbol: QCOM
+  name: QUALCOMM Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: IREN
+  name: IREN Limited Ordinary Shares
+  sector: auto
+  volatile: true
+- symbol: PG
+  name: Procter & Gamble Company
+  sector: auto
+  volatile: false
+- symbol: CBRS
+  name: Cerebras Systems Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: SHOP
+  name: Shopify Inc. Class A subordinate voting shares
+  sector: Software
+  volatile: true
+- symbol: FCX
+  name: Freeport-McMoran Inc.
+  sector: auto
+  volatile: false
+- symbol: BA
+  name: Boeing Company
+  sector: Industrial
+  volatile: true
+- symbol: COST
+  name: Costco Wholesale Corporation Common Stock
+  sector: Retail
+  volatile: false
+- symbol: PFE
+  name: Pfizer Inc.
+  sector: auto
+  volatile: false
+- symbol: ABBV
+  name: ABBVIE INC.
+  sector: auto
+  volatile: false
+- symbol: ADI
+  name: Analog Devices, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CVX
+  name: Chevron Corporation
+  sector: auto
+  volatile: false
+- symbol: DDOG
+  name: Datadog, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: NEE
+  name: NextEra Energy, Inc.
+  sector: auto
+  volatile: false
+- symbol: NOK
+  name: Nokia Corporation
+  sector: auto
+  volatile: false
+- symbol: GE
+  name: GE Aerospace
+  sector: auto
+  volatile: false
+- symbol: APH
+  name: Amphenol Corporation
+  sector: auto
+  volatile: false
+- symbol: WFC
+  name: Wells Fargo & Co.
+  sector: auto
+  volatile: false
+- symbol: ISRG
+  name: Intuitive Surgical, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: BKNG
+  name: Booking Holdings Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: TER
+  name: Teradyne, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: MRK
+  name: Merck & Co., Inc.
+  sector: auto
+  volatile: false
+- symbol: NET
+  name: Cloudflare, Inc. Class A common stock, par value $0.001 per share
+  sector: auto
+  volatile: true
+- symbol: HD
+  name: Home Depot, Inc.
+  sector: auto
+  volatile: false
+- symbol: MPWR
+  name: Monolithic Power Systems, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CRDO
+  name: Credo Technology Group Holding Ltd Ordinary Shares
+  sector: auto
+  volatile: true
+- symbol: CLS
+  name: Celestica, Inc.
+  sector: auto
+  volatile: true
+- symbol: ADBE
+  name: Adobe Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: HPE
+  name: Hewlett Packard Enterprise Company
+  sector: auto
+  volatile: true
+- symbol: ALAB
+  name: Astera Labs, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: ABT
+  name: Abbott Laboratories
+  sector: auto
+  volatile: false
+- symbol: PWR
+  name: Quanta Services, Inc.
+  sector: auto
+  volatile: false
+- symbol: NKE
+  name: Nike, Inc.
+  sector: auto
+  volatile: false
+- symbol: ACN
+  name: Accenture PLC
+  sector: auto
+  volatile: false
+- symbol: MCD
+  name: McDonald's Corporation
+  sector: auto
+  volatile: false
+- symbol: DIS
+  name: The Walt Disney Company
+  sector: auto
+  volatile: false
+- symbol: DASH
+  name: DoorDash, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: MS
+  name: Morgan Stanley
+  sector: auto
+  volatile: false
+- symbol: CMG
+  name: Chipotle Mexican Grill, Inc.
+  sector: auto
+  volatile: false
+- symbol: SPGI
+  name: S&P Global Inc.
+  sector: auto
+  volatile: false
+- symbol: CDNS
+  name: Cadence Design Systems, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CIEN
+  name: Ciena Corporation
+  sector: auto
+  volatile: true
+- symbol: C
+  name: Citigroup Inc.
+  sector: auto
+  volatile: false
+- symbol: PCG
+  name: PG&E Corporation
+  sector: auto
+  volatile: false
+- symbol: COP
+  name: ConocoPhillips
+  sector: auto
+  volatile: false
+- symbol: BLK
+  name: Blackrock, Inc.
+  sector: auto
+  volatile: false
+- symbol: UNP
+  name: Union Pacific Corp.
+  sector: auto
+  volatile: false
+- symbol: ETN
+  name: Eaton Corporation, plc Ordinary Shares
+  sector: auto
+  volatile: false
+- symbol: TJX
+  name: TJX Companies, Inc. (The)
+  sector: auto
+  volatile: false
+- symbol: WBD
+  name: Warner Bros. Discovery, Inc. Series A Common Stock
+  sector: auto
+  volatile: false
+- symbol: RDDT
+  name: Reddit, Inc.
+  sector: auto
+  volatile: true
+- symbol: FIX
+  name: Comfort Systems USA, Inc.
+  sector: auto
+  volatile: true
+- symbol: WDAY
+  name: Workday, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: NU
+  name: Nu Holdings Ltd.
+  sector: auto
+  volatile: false
+- symbol: COIN
+  name: Coinbase Global, Inc. Class A Common Stock
+  sector: Crypto
+  volatile: true
+- symbol: MDT
+  name: Medtronic plc
+  sector: auto
+  volatile: false
+- symbol: BMY
+  name: Bristol-Myers Squibb Co.
+  sector: auto
+  volatile: false
+- symbol: LIN
+  name: Linde plc Ordinary Shares
+  sector: auto
+  volatile: false
+- symbol: DE
+  name: Deere & Company
+  sector: auto
+  volatile: false
+- symbol: RTX
+  name: RTX Corporation
+  sector: auto
+  volatile: false
+- symbol: CVS
+  name: CVS HEALTH CORPORATION
+  sector: auto
+  volatile: false
+- symbol: SLB
+  name: SLB Limited
+  sector: auto
+  volatile: false
+- symbol: AXP
+  name: American Express Company
+  sector: auto
+  volatile: false
+- symbol: MCK
+  name: McKesson Corporation
+  sector: auto
+  volatile: false
+- symbol: PM
+  name: Philip Morris International Inc.
+  sector: auto
+  volatile: false
+- symbol: NXPI
+  name: NXP Semiconductors N.V. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CMCSA
+  name: Comcast Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: CSX
+  name: CSX Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: SYK
+  name: Stryker Corporation
+  sector: auto
+  volatile: false
+- symbol: MDB
+  name: MongoDB, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: MPC
+  name: MARATHON PETROLEUM CORPORATION
+  sector: auto
+  volatile: false
+- symbol: TDG
+  name: TransDigm Group Incorporated
+  sector: auto
+  volatile: false
+- symbol: EQIX
+  name: Equinix, Inc. Common Stock REIT
+  sector: auto
+  volatile: false
+- symbol: MO
+  name: Altria Group, Inc.
+  sector: auto
+  volatile: false
+- symbol: MELI
+  name: MercadoLibre, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: ABNB
+  name: Airbnb, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: VLO
+  name: Valero Energy Corporation
+  sector: auto
+  volatile: false
+- symbol: TEL
+  name: TE Connectivity plc
+  sector: auto
+  volatile: false
+- symbol: AZN
+  name: AstraZeneca PLC
+  sector: auto
+  volatile: false
+- symbol: AMGN
+  name: Amgen Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: PYPL
+  name: PayPal Holdings, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: PH
+  name: Parker-Hannifin Corporation
+  sector: auto
+  volatile: false
+- symbol: SNPS
+  name: Synopsys, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: FDX
+  name: FedEx Corporation
+  sector: auto
+  volatile: false
+- symbol: TMUS
+  name: T-Mobile US, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CMI
+  name: Cummins Inc.
+  sector: auto
+  volatile: false
+- symbol: TEAM
+  name: Atlassian Corporation Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: RCL
+  name: Royal Caribbean Group
+  sector: auto
+  volatile: false
+- symbol: CIFR
+  name: Cipher Digital Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CVNA
+  name: Carvana Co.
+  sector: auto
+  volatile: true
+- symbol: MDLZ
+  name: Mondelez International, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: B
+  name: Barrick Mining Corporation
+  sector: auto
+  volatile: false
+- symbol: URI
+  name: United Rentals, Inc.
+  sector: auto
+  volatile: false
+- symbol: DVN
+  name: Devon Energy Corporation
+  sector: auto
+  volatile: false
+- symbol: ROST
+  name: Ross Stores, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: NEM
+  name: Newmont Corporation
+  sector: auto
+  volatile: false
+- symbol: FERG
+  name: Ferguson Enterprises Inc.
+  sector: auto
+  volatile: false
+- symbol: HONA
+  name: Honeywell Aerospace Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: NVO
+  name: Novo-Nordisk A/S
+  sector: auto
+  volatile: false
+- symbol: HPQ
+  name: HP Inc.
+  sector: auto
+  volatile: true
+- symbol: HLT
+  name: Hilton Worldwide Holdings Inc.
+  sector: auto
+  volatile: false
+- symbol: COF
+  name: Capital One Financial
+  sector: auto
+  volatile: false
+- symbol: SOFI
+  name: SoFi Technologies, Inc. Common Stock
+  sector: Fintech
+  volatile: true
+- symbol: CEG
+  name: Constellation Energy Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: WULF
+  name: TeraWulf Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: FTNT
+  name: Fortinet, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: HWM
+  name: Howmet Aerospace Inc.
+  sector: auto
+  volatile: false
+- symbol: BMNR
+  name: BitMine Immersion Technologies, Inc.
+  sector: auto
+  volatile: true
+- symbol: FN
+  name: Fabrinet
+  sector: auto
+  volatile: true
+- symbol: ALNY
+  name: Alnylam Pharmaceuticals, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: STM
+  name: STMicroelectronics N.V.
+  sector: auto
+  volatile: false
+- symbol: AEM
+  name: Agnico Eagle Mines Ltd.
+  sector: auto
+  volatile: false
+- symbol: TGT
+  name: Target Corporation
+  sector: auto
+  volatile: false
+- symbol: HCA
+  name: HCA Healthcare, Inc.
+  sector: auto
+  volatile: false
+- symbol: OXY
+  name: Occidental Petroleum Corporation
+  sector: auto
+  volatile: false
+- symbol: WELL
+  name: Welltower Inc.
+  sector: auto
+  volatile: false
+- symbol: GILD
+  name: Gilead Sciences, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: PEP
+  name: PepsiCo, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: MTZ
+  name: MasTec, Inc.
+  sector: auto
+  volatile: true
+- symbol: PSX
+  name: PHILLIPS 66
+  sector: auto
+  volatile: false
+- symbol: FIG
+  name: Figma, Inc.
+  sector: auto
+  volatile: true
+- symbol: LOW
+  name: Lowe's Companies Inc.
+  sector: auto
+  volatile: false
+- symbol: SAP
+  name: SAP SE
+  sector: auto
+  volatile: false
+- symbol: REGN
+  name: Regeneron Pharmaceuticals, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: ICE
+  name: Intercontinental Exchange  Inc.
+  sector: auto
+  volatile: false
+- symbol: AZO
+  name: AutoZone, Inc.
+  sector: auto
+  volatile: false
+- symbol: CCL
+  name: Carnival Corporation Ltd.
+  sector: auto
+  volatile: false
+- symbol: MCHP
+  name: Microchip Technology Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: EQT
+  name: EQT CORP
+  sector: auto
+  volatile: false
+- symbol: MLM
+  name: Martin Marietta Materials
+  sector: auto
+  volatile: false
+- symbol: TSCO
+  name: Tractor Supply Company Common Stock
+  sector: auto
+  volatile: false
+- symbol: BP
+  name: BP p.l.c.
+  sector: auto
+  volatile: false
+- symbol: AAOI
+  name: Applied Optoelectronics, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CB
+  name: Chubb Limited
+  sector: auto
+  volatile: false
+- symbol: VST
+  name: Vistra Corp.
+  sector: auto
+  volatile: false
+- symbol: F
+  name: Ford Motor Company
+  sector: auto
+  volatile: false
+- symbol: BKR
+  name: Baker Hughes Company Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: SHW
+  name: The Sherwin-Williams Company
+  sector: auto
+  volatile: false
+- symbol: USB
+  name: U.S. Bancorp
+  sector: auto
+  volatile: false
+- symbol: TRV
+  name: The Travelers Companies, Inc.
+  sector: auto
+  volatile: false
+- symbol: VRTX
+  name: Vertex Pharmaceuticals Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: RKLB
+  name: Rocket Lab Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: CME
+  name: CME Group Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: PGR
+  name: Progressive Corporation
+  sector: auto
+  volatile: false
+- symbol: BX
+  name: Blackstone Inc.
+  sector: auto
+  volatile: false
+- symbol: AAL
+  name: American Airlines Group Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: U
+  name: Unity Software Inc.
+  sector: auto
+  volatile: true
+- symbol: IONQ
+  name: IonQ, Inc.
+  sector: auto
+  volatile: true
+- symbol: CRCL
+  name: Circle Internet Group, Inc.
+  sector: auto
+  volatile: true
+- symbol: 'ON'
+  name: ON Semiconductor Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: TWLO
+  name: Twilio Inc.
+  sector: auto
+  volatile: true
+- symbol: TT
+  name: Trane Technologies plc
+  sector: auto
+  volatile: false
+- symbol: HON
+  name: Honeywell International Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: MKSI
+  name: MKS Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: ILMN
+  name: Illumina, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: MMM
+  name: 3M Company
+  sector: auto
+  volatile: false
+- symbol: CTSH
+  name: Cognizant Technology Solutions Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: PATH
+  name: UiPath, Inc.
+  sector: auto
+  volatile: true
+- symbol: ADP
+  name: Automatic Data Processing, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: HAL
+  name: Halliburton Company
+  sector: auto
+  volatile: false
+- symbol: FICO
+  name: Fair Isaac Corporation
+  sector: auto
+  volatile: false
+- symbol: TTWO
+  name: Take-Two Interactive Software, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: HUBS
+  name: HUBSPOT, INC.
+  sector: auto
+  volatile: true
+- symbol: SBUX
+  name: Starbucks Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: LMT
+  name: Lockheed Martin Corp.
+  sector: auto
+  volatile: false
+- symbol: MSI
+  name: Motorola Solutions, Inc. New
+  sector: auto
+  volatile: false
+- symbol: WMB
+  name: Williams Companies Inc.
+  sector: auto
+  volatile: false
+- symbol: PLD
+  name: PROLOGIS, INC.
+  sector: auto
+  volatile: false
+- symbol: CRH
+  name: CRH Public Limited Company
+  sector: auto
+  volatile: false
+- symbol: MSCI
+  name: MSCI, Inc.
+  sector: auto
+  volatile: false
+- symbol: KEYS
+  name: Keysight Technologies, Inc.
+  sector: auto
+  volatile: false
+- symbol: EXPE
+  name: Expedia Group, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: SO
+  name: The Southern Company
+  sector: auto
+  volatile: false
+- symbol: MAR
+  name: Marriott International Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: PBR
+  name: PETROLEO BRASILEIRO S.A.-PETROBRAS ADS (REP 1 COMMON SHARE)
+  sector: auto
+  volatile: false
+- symbol: KKR
+  name: KKR & Co. Inc.
+  sector: auto
+  volatile: false
+- symbol: TSEM
+  name: Tower Semiconductor Ltd. Ordinary Shares
+  sector: auto
+  volatile: true
+- symbol: HUM
+  name: Humana Inc.
+  sector: auto
+  volatile: false
+- symbol: ORLY
+  name: O'Reilly Automotive, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: RIOT
+  name: Riot Platforms, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: BURL
+  name: BURLINGTON STORES, INC.
+  sector: auto
+  volatile: false
+- symbol: CNQ
+  name: Canadian Natural Resources Limited
+  sector: auto
+  volatile: false
+- symbol: CPRT
+  name: Copart, Inc. (DE) Common Stock
+  sector: auto
+  volatile: false
+- symbol: AXON
+  name: Axon Enterprise, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: COR
+  name: Cencora, Inc.
+  sector: auto
+  volatile: false
+- symbol: MNST
+  name: Monster Beverage Corporation
+  sector: auto
+  volatile: false
+- symbol: IDXX
+  name: IDEXX Laboratories, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: DKS
+  name: Dick's Sporting Goods, Inc.
+  sector: auto
+  volatile: false
+- symbol: LNG
+  name: Cheniere Energy Inc
+  sector: auto
+  volatile: false
+- symbol: KGC
+  name: Kinross Gold Corporation
+  sector: auto
+  volatile: false
+- symbol: ADSK
+  name: Autodesk, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: JCI
+  name: Johnson Controls International plc
+  sector: auto
+  volatile: false
+- symbol: FSLR
+  name: First Solar, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: KDP
+  name: Keurig Dr Pepper Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: NTRA
+  name: Natera, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: RBLX
+  name: Roblox Corporation
+  sector: auto
+  volatile: true
+- symbol: XYZ
+  name: Block, Inc.
+  sector: auto
+  volatile: false
+- symbol: FLEX
+  name: Flex Ltd. Ordinary Shares
+  sector: auto
+  volatile: true
+- symbol: CRS
+  name: Carpenter Technology Corp
+  sector: auto
+  volatile: false
+- symbol: WM
+  name: Waste Management, Inc.
+  sector: auto
+  volatile: false
+- symbol: STRL
+  name: Sterling Infrastructure, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: KHC
+  name: The Kraft Heinz Company Common Stock
+  sector: auto
+  volatile: false
+- symbol: EOG
+  name: EOG Resources, Inc.
+  sector: auto
+  volatile: false
+- symbol: ROK
+  name: Rockwell Automation, Inc.
+  sector: auto
+  volatile: false
+- symbol: CHTR
+  name: Charter Communications, Inc. Class A Common Stock New
+  sector: auto
+  volatile: true
+- symbol: KR
+  name: The Kroger Co.
+  sector: auto
+  volatile: false
+- symbol: LHX
+  name: L3Harris Technologies, Inc.
+  sector: auto
+  volatile: false
+- symbol: CARR
+  name: Carrier Global Corporation
+  sector: auto
+  volatile: false
+- symbol: OKTA
+  name: Okta, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: GIS
+  name: General Mills, Inc.
+  sector: auto
+  volatile: false
+- symbol: ONTO
+  name: Onto Innovation Inc.
+  sector: auto
+  volatile: true
+- symbol: TOST
+  name: Toast, Inc.
+  sector: auto
+  volatile: false
+- symbol: HBAN
+  name: Huntington Bancshares Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: WAT
+  name: Waters Corp
+  sector: auto
+  volatile: false
+- symbol: D
+  name: Dominion Energy, Inc Common Stock
+  sector: auto
+  volatile: false
+- symbol: ECL
+  name: Ecolab, Inc.
+  sector: auto
+  volatile: false
+- symbol: MCO
+  name: Moody's Corporation
+  sector: auto
+  volatile: false
+- symbol: KMI
+  name: Kinder Morgan, Inc.
+  sector: auto
+  volatile: false
+- symbol: NTAP
+  name: NetApp, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: IQV
+  name: IQVIA Holdings Inc.
+  sector: auto
+  volatile: false
+- symbol: ATI
+  name: ATI Inc.
+  sector: auto
+  volatile: false
+- symbol: NOC
+  name: Northrop Grumman Corp.
+  sector: auto
+  volatile: false
+- symbol: HL
+  name: Hecla Mining Company
+  sector: auto
+  volatile: true
+- symbol: FITB
+  name: Fifth Third Bancorp
+  sector: auto
+  volatile: false
+- symbol: CI
+  name: The Cigna Group
+  sector: auto
+  volatile: false
+- symbol: HUT
+  name: Hut 8 Corp. Common Stock
+  sector: auto
+  volatile: true
+- symbol: SMTC
+  name: Semtech Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: TTMI
+  name: TTM Technologies, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CDE
+  name: Coeur Mining, Inc.
+  sector: auto
+  volatile: true
+- symbol: AMT
+  name: American Tower Corporation
+  sector: auto
+  volatile: false
+- symbol: XEL
+  name: Xcel Energy Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: TFC
+  name: Truist Financial Corporation
+  sector: auto
+  volatile: false
+- symbol: VEEV
+  name: Veeva Systems Inc.
+  sector: auto
+  volatile: false
+- symbol: UPS
+  name: United Parcel Service, Inc. Class B
+  sector: auto
+  volatile: false
+- symbol: DUK
+  name: Duke Energy Corporation
+  sector: auto
+  volatile: false
+- symbol: TPR
+  name: Tapestry, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: TRGP
+  name: Targa Resources Corp.
+  sector: auto
+  volatile: false
+- symbol: EBAY
+  name: eBay Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: VALE
+  name: VALE S.A.
+  sector: auto
+  volatile: false
+- symbol: ALL
+  name: The Allstate Corporation
+  sector: auto
+  volatile: false
+- symbol: KVUE
+  name: Kenvue Inc.
+  sector: auto
+  volatile: false
+- symbol: FTAI
+  name: FTAI Aviation Ltd. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CTVA
+  name: Corteva, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: AON
+  name: Aon plc Class A
+  sector: auto
+  volatile: false
+- symbol: DAL
+  name: Delta Air Lines, Inc.
+  sector: auto
+  volatile: false
+- symbol: GWW
+  name: W.W. Grainger, Inc.
+  sector: auto
+  volatile: false
+- symbol: EMR
+  name: Emerson Electric Co.
+  sector: auto
+  volatile: false
+- symbol: HUBB
+  name: Hubbell Incorporated
+  sector: auto
+  volatile: false
+- symbol: FAST
+  name: Fastenal Company Common Stock
+  sector: auto
+  volatile: false
+- symbol: SU
+  name: Suncor Energy, Inc.
+  sector: auto
+  volatile: false
+- symbol: VMC
+  name: Vulcan Materials Company(Holding Company)
+  sector: auto
+  volatile: false
+- symbol: APO
+  name: Apollo Global Management, Inc.
+  sector: auto
+  volatile: false
+- symbol: ULTA
+  name: Ulta Beauty, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: PCAR
+  name: PACCAR Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: GM
+  name: General Motors Company
+  sector: auto
+  volatile: false
+- symbol: AKAM
+  name: Akamai Technologies, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: RKT
+  name: Rocket Companies, Inc.
+  sector: auto
+  volatile: true
+- symbol: ENB
+  name: Enbridge, Inc
+  sector: auto
+  volatile: false
+- symbol: ZTS
+  name: ZOETIS INC.
+  sector: auto
+  volatile: false
+- symbol: NVT
+  name: nVent Electric plc Ordinary Shares
+  sector: auto
+  volatile: false
+- symbol: DT
+  name: Dynatrace, Inc.
+  sector: auto
+  volatile: false
+- symbol: W
+  name: Wayfair Inc.
+  sector: auto
+  volatile: true
+- symbol: INSM
+  name: Insmed Incorporated Common Stock
+  sector: auto
+  volatile: false
+- symbol: MOD
+  name: Modine Manufacturing Co
+  sector: auto
+  volatile: true
+- symbol: CL
+  name: Colgate-Palmolive Company
+  sector: auto
+  volatile: false
+- symbol: DXCM
+  name: DexCom, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: EXC
+  name: Exelon Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: ODFL
+  name: Old Dominion Freight Line, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: LPLA
+  name: LPL Financial Holdings Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CHRW
+  name: C.H. Robinson Worldwide, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: FIS
+  name: Fidelity National Information Services, Inc.
+  sector: auto
+  volatile: false
+- symbol: DOW
+  name: Dow Inc.
+  sector: auto
+  volatile: false
+- symbol: CAH
+  name: Cardinal Health, Inc.
+  sector: auto
+  volatile: false
+- symbol: DOCN
+  name: DigitalOcean Holdings, Inc.
+  sector: auto
+  volatile: true
+- symbol: WWD
+  name: Woodward, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: LII
+  name: Lennox International Inc.
+  sector: auto
+  volatile: false
+- symbol: FISV
+  name: Fiserv, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: AEP
+  name: American Electric Power Company, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: APLD
+  name: Applied Digital Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: CNP
+  name: CenterPoint Energy, Inc.
+  sector: auto
+  volatile: false
+- symbol: ZS
+  name: Zscaler, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: BNY
+  name: Bank of New York Mellon Corporation
+  sector: auto
+  volatile: false
+- symbol: GH
+  name: Guardant Health, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: NUE
+  name: Nucor Corporation
+  sector: auto
+  volatile: false
+- symbol: PINS
+  name: Pinterest, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: A
+  name: Agilent Technologies Inc.
+  sector: auto
+  volatile: false
+- symbol: IBKR
+  name: Interactive Brokers Group, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: TYL
+  name: Tyler Technologies, Inc.
+  sector: auto
+  volatile: false
+- symbol: EME
+  name: EMCOR Group, Inc.
+  sector: auto
+  volatile: false
+- symbol: ELV
+  name: Elevance Health, Inc.
+  sector: auto
+  volatile: false
+- symbol: AJG
+  name: Arthur J. Gallagher & Co.
+  sector: auto
+  volatile: false
+- symbol: NI
+  name: NiSource Inc.
+  sector: auto
+  volatile: false
+- symbol: VRSK
+  name: Verisk Analytics, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: MRSH
+  name: Marsh
+  sector: auto
+  volatile: false
+- symbol: PPL
+  name: PPL Corporation
+  sector: auto
+  volatile: false
+- symbol: DKNG
+  name: DraftKings Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: CORZ
+  name: Core Scientific, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: YUM
+  name: Yum! Brands, Inc.
+  sector: auto
+  volatile: false
+- symbol: CPNG
+  name: Coupang, Inc.
+  sector: auto
+  volatile: false
+- symbol: RRX
+  name: Regal Rexnord Corporation
+  sector: auto
+  volatile: false
+- symbol: UAL
+  name: United Airlines Holdings, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: AXTI
+  name: AXT Inc Common Stock
+  sector: auto
+  volatile: true
+- symbol: UL
+  name: Unilever plc
+  sector: auto
+  volatile: false
+- symbol: IR
+  name: Ingersoll Rand Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: VIK
+  name: Viking Holdings Ltd
+  sector: auto
+  volatile: false
+- symbol: NRG
+  name: NRG Energy, Inc.
+  sector: auto
+  volatile: true
+- symbol: EW
+  name: Edwards Lifesciences Corp
+  sector: auto
+  volatile: false
+- symbol: MTD
+  name: Mettler-Toledo International
+  sector: auto
+  volatile: false
+- symbol: BDX
+  name: Becton, Dickinson and Co.
+  sector: auto
+  volatile: false
+- symbol: RVMD
+  name: Revolution Medicines, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: SRE
+  name: Sempra
+  sector: auto
+  volatile: false
+- symbol: GD
+  name: General Dynamics Corporation
+  sector: auto
+  volatile: false
+- symbol: CTAS
+  name: Cintas Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: MTSI
+  name: MACOM Technology Solutions Holdings, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: WAB
+  name: Wabtec Inc.
+  sector: auto
+  volatile: false
+- symbol: AFRM
+  name: Affirm Holdings, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: RMD
+  name: ResMed Inc.
+  sector: auto
+  volatile: false
+- symbol: ARES
+  name: Ares Management Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: MDLN
+  name: Medline Inc. Class A common stock
+  sector: auto
+  volatile: false
+- symbol: DRI
+  name: Darden Restaurants, Inc.
+  sector: auto
+  volatile: false
+- symbol: LYV
+  name: Live Nation Entertainment Inc.
+  sector: auto
+  volatile: false
+- symbol: TLN
+  name: Talen Energy Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: DPZ
+  name: Domino's Pizza Inc Common Stock
+  sector: auto
+  volatile: false
+- symbol: SN
+  name: SharkNinja, Inc.
+  sector: auto
+  volatile: false
+- symbol: CHYM
+  name: Chime Financial, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: RIG
+  name: Transocean LTD.
+  sector: auto
+  volatile: false
+- symbol: MARA
+  name: MARA Holdings, Inc. Common Stock
+  sector: Crypto
+  volatile: true
+- symbol: EFX
+  name: Equifax, Incorporated
+  sector: auto
+  volatile: false
+- symbol: ASTS
+  name: AST SpaceMobile, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: RF
+  name: Regions Financial Corp.
+  sector: auto
+  volatile: false
+- symbol: STLD
+  name: Steel Dynamics, Inc.
+  sector: auto
+  volatile: false
+- symbol: BN
+  name: Brookfield Corporation
+  sector: auto
+  volatile: false
+- symbol: O
+  name: Realty Income Corporation
+  sector: auto
+  volatile: false
+- symbol: ITW
+  name: Illinois Tool Works Inc.
+  sector: auto
+  volatile: false
+- symbol: GNRC
+  name: GENERAC HOLDINGS INC
+  sector: auto
+  volatile: true
+- symbol: ZM
+  name: Zoom Communications, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: JBL
+  name: Jabil Inc.
+  sector: auto
+  volatile: false
+- symbol: CVE
+  name: Cenovus Energy Inc.
+  sector: auto
+  volatile: false
+- symbol: CRL
+  name: Charles River Laboratories International, Inc.
+  sector: auto
+  volatile: false
+- symbol: SAN
+  name: Banco Santander S.A.
+  sector: auto
+  volatile: false
+- symbol: APD
+  name: Air Products & Chemicals, Inc.
+  sector: auto
+  volatile: false
+- symbol: ECHO
+  name: EchoStar Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: ENTG
+  name: Entegris, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: FIVE
+  name: Five Below, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: EAT
+  name: Brinker International, Inc.
+  sector: auto
+  volatile: false
+- symbol: OKE
+  name: Oneok, Inc.
+  sector: auto
+  volatile: false
+- symbol: CASY
+  name: Casey's General Stores, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: QXO
+  name: QXO, Inc.
+  sector: auto
+  volatile: true
+- symbol: KNX
+  name: Knight-Swift Transportation Holdings Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: FANG
+  name: Diamondback Energy, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: WCC
+  name: Wesco International Inc.
+  sector: auto
+  volatile: false
+- symbol: NSC
+  name: Norfolk Southern Corp.
+  sector: auto
+  volatile: false
+- symbol: AWK
+  name: American Water Works Company, Inc
+  sector: auto
+  volatile: false
+- symbol: CELH
+  name: Celsius Holdings, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: SWKS
+  name: Skyworks Solutions, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: PNC
+  name: PNC Financial Services Group
+  sector: auto
+  volatile: false
+- symbol: OVV
+  name: Ovintiv Inc.
+  sector: auto
+  volatile: false
+- symbol: UMC
+  name: United Microelectronic Corp.
+  sector: auto
+  volatile: false
+- symbol: CF
+  name: CF Industries Holding, Inc.
+  sector: auto
+  volatile: false
+- symbol: PSA
+  name: Public Storage
+  sector: auto
+  volatile: false
+- symbol: TTD
+  name: The Trade Desk, Inc. Class A Common Stock
+  sector: auto
+  volatile: true
+- symbol: ADM
+  name: Archer Daniels Midland Company
+  sector: auto
+  volatile: false
+- symbol: PAAS
+  name: Pan American Silver Corp.
+  sector: auto
+  volatile: false
+- symbol: AME
+  name: Ametek, Inc.
+  sector: auto
+  volatile: false
+- symbol: DHI
+  name: D.R. Horton Inc.
+  sector: auto
+  volatile: false
+- symbol: USFD
+  name: US Foods Holding Corp.
+  sector: auto
+  volatile: false
+- symbol: DG
+  name: Dollar General Corp.
+  sector: auto
+  volatile: false
+- symbol: VMRK
+  name: Vivmark Residential
+  sector: auto
+  volatile: false
+- symbol: RIO
+  name: Rio Tinto plc
+  sector: auto
+  volatile: false
+- symbol: DLTR
+  name: Dollar Tree Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: FFIV
+  name: F5, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: PODD
+  name: Insulet Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: SITM
+  name: SiTime Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: ROP
+  name: Roper Technologies, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CFG
+  name: Citizens Financial Group, Inc.
+  sector: auto
+  volatile: false
+- symbol: RSG
+  name: Republic Services Inc.
+  sector: auto
+  volatile: false
+- symbol: THC
+  name: Tenet Healthcare Corporation New
+  sector: auto
+  volatile: false
+- symbol: ZBRA
+  name: Zebra Technologies Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: HST
+  name: Host Hotels & Resorts, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: FTI
+  name: TechnipFMC plc Ordinary Share
+  sector: auto
+  volatile: false
+- symbol: ONDS
+  name: Ondas Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: CDW
+  name: CDW Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: NXT
+  name: Nextpower Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: SBAC
+  name: SBA Communications Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: NCLH
+  name: Norwegian Cruise Line Holdings Ltd. Ordinary Shares
+  sector: auto
+  volatile: false
+- symbol: WSM
+  name: Williams-Sonoma, Inc.
+  sector: auto
+  volatile: false
+- symbol: CP
+  name: Canadian Pacific Kansas City Limited
+  sector: auto
+  volatile: false
+- symbol: GEHC
+  name: GE HealthCare Technologies Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: LVS
+  name: Las Vegas Sands Corp.
+  sector: auto
+  volatile: false
+- symbol: RIVN
+  name: Rivian Automotive, Inc. Class A Common Stock
+  sector: Auto/EV
+  volatile: true
+- symbol: PR
+  name: Permian Resources Corporation
+  sector: auto
+  volatile: false
+- symbol: ETSY
+  name: Etsy, Inc.
+  sector: auto
+  volatile: false
+- symbol: WPM
+  name: Wheaton Precious Metals Corp. Common Stock
+  sector: auto
+  volatile: false
+- symbol: ROL
+  name: Rollins, Inc.
+  sector: auto
+  volatile: false
+- symbol: KMB
+  name: Kimberly-Clark Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: ROKU
+  name: Roku, Inc. Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: MET
+  name: MetLife, Inc.
+  sector: auto
+  volatile: false
+- symbol: HIMS
+  name: Hims & Hers Health, Inc.
+  sector: auto
+  volatile: true
+- symbol: CCJ
+  name: Cameco Corporation
+  sector: auto
+  volatile: false
+- symbol: P
+  name: Everpure, Inc.
+  sector: auto
+  volatile: true
+- symbol: NVS
+  name: Novartis AG
+  sector: auto
+  volatile: false
+- symbol: LULU
+  name: lululemon athletica inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: JHX
+  name: James Hardie Industries plc
+  sector: auto
+  volatile: false
+- symbol: KEY
+  name: KeyCorp
+  sector: auto
+  volatile: false
+- symbol: TECK
+  name: Teck Resources Limited
+  sector: auto
+  volatile: false
+- symbol: CMS
+  name: CMS Energy Corporation
+  sector: auto
+  volatile: false
+- symbol: EIX
+  name: Edison International
+  sector: auto
+  volatile: false
+- symbol: JBHT
+  name: J.B. Hunt Transport Services, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: CRBG
+  name: Corebridge Financial, Inc.
+  sector: auto
+  volatile: false
+- symbol: PAYX
+  name: Paychex, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: RL
+  name: Ralph Lauren Corporation
+  sector: auto
+  volatile: false
+- symbol: SYF
+  name: SYNCHRONY FINANCIAL
+  sector: auto
+  volatile: false
+- symbol: CSGP
+  name: CoStar Group, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: SAIA
+  name: Saia, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: SW
+  name: Smurfit WestRock plc
+  sector: auto
+  volatile: false
+- symbol: CCI
+  name: Crown Castle Inc.
+  sector: auto
+  volatile: false
+- symbol: FOXA
+  name: Fox Corporation Class A Common Stock
+  sector: auto
+  volatile: false
+- symbol: CLSK
+  name: CleanSpark, Inc. Common Stock
+  sector: auto
+  volatile: true
+- symbol: NBIX
+  name: Neurocrine Biosciences, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: QSR
+  name: Restaurant Brands International Inc.
+  sector: auto
+  volatile: false
+- symbol: HDB
+  name: HDFC Bank Limited
+  sector: auto
+  volatile: false
+- symbol: APA
+  name: APA Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: RBRK
+  name: Rubrik, Inc.
+  sector: auto
+  volatile: true
+- symbol: AU
+  name: AngloGold Ashanti plc
+  sector: auto
+  volatile: false
+- symbol: VICI
+  name: VICI Properties Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: ASX
+  name: ASE Technology Holding Co., Ltd.
+  sector: auto
+  volatile: true
+- symbol: FPS
+  name: Forgent Power Solutions, Inc.
+  sector: auto
+  volatile: true
+- symbol: ONON
+  name: On Holding AG
+  sector: auto
+  volatile: false
+- symbol: EXE
+  name: Expand Energy Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: UTHR
+  name: United Therapeutics Corporation Common Stock
+  sector: auto
+  volatile: false
+- symbol: RGEN
+  name: Repligen Corporation Common Stock
+  sector: auto
+  volatile: true
+- symbol: VRSN
+  name: VeriSign, Inc. Common Stock
+  sector: auto
+  volatile: false
+- symbol: ARM
+  name: ''
+  sector: Semis
+  volatile: true

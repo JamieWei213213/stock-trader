@@ -1,0 +1,25 @@
+# Stock Trader schedule — times are America/Los_Angeles (setup.sh sets the VPS timezone).
+# Market hours PT: 6:30am–1:00pm, Mon–Fri. Cron does not know holidays; run_cycle checks the market clock.
+CRON_TZ=America/Los_Angeles
+APP=/opt/stocktrader
+PY=/opt/stocktrader/.venv/bin/python
+
+# $1k account: once daily at 12:45pm — entries fill near the close (backtest: close entries beat open entries)
+45 12 * * 1-5  cd $APP && $PY run_cycle.py --account small  >> logs/small.log 2>&1   # stocktrader
+
+# $100k account: 6:05am look (mostly manages existing positions) + 12:45pm entry cycle
+5  6  * * 1-5  cd $APP && $PY run_cycle.py --account large  >> logs/large.log 2>&1   # stocktrader
+45 12 * * 1-5  cd $APP && $PY run_cycle.py --account large  >> logs/large.log 2>&1   # stocktrader
+
+# Rebuild the ~500-stock universe every Sunday 6pm (takes a few minutes)
+0  18 * * 0    cd $APP && $PY build_universe.py >> logs/universe.log 2>&1              # stocktrader
+
+# Weekly agent evaluation report (Fridays after close)
+0  14 * * 5    cd $APP && $PY eval_agents.py --md >> logs/eval.log 2>&1                 # stocktrader
+
+# End-of-day scoreboard for both accounts
+15 13 * * 1-5  cd $APP && $PY daily_summary.py >> logs/summary.log 2>&1              # stocktrader
+
+# Rebuild the HTML dashboard every 30 min during market hours + once after close.
+# (The dashboard web server itself runs as the systemd service 'stocktrader-dash', see vps/setup.sh.)
+*/30 6-13 * * 1-5 cd $APP && $PY dashboard.py >> logs/dashboard.log 2>&1              # stocktrader

@@ -1,0 +1,3004 @@
+# Auto-built 2026-09-03 — top 1500 by 30d dollar volume. Backtest pool only.
+stocks:
+- symbol: NVDA
+  name: NVIDIA Corporation Common Stock
+- symbol: MU
+  name: Micron Technology, Inc. Common Stock
+- symbol: SNDK
+  name: Sandisk Corporation Common Stock
+- symbol: AAPL
+  name: Apple Inc. Common Stock
+- symbol: MSFT
+  name: Microsoft Corporation Common Stock
+- symbol: AMZN
+  name: Amazon.com, Inc. Common Stock
+- symbol: META
+  name: Meta Platforms, Inc. Class A Common Stock
+- symbol: SPCX
+  name: Space Exploration Technologies Corp. Class A Common Stock
+- symbol: GOOGL
+  name: Alphabet Inc. Class A Common Stock
+- symbol: INTC
+  name: Intel Corporation Common Stock
+- symbol: TSLA
+  name: Tesla, Inc. Common Stock
+- symbol: AMD
+  name: Advanced Micro Devices, Inc. Common Stock
+- symbol: AVGO
+  name: Broadcom Inc. Common Stock
+- symbol: GOOG
+  name: Alphabet Inc. Class C Capital Stock
+- symbol: TSM
+  name: Taiwan Semiconductor Manufacturing Company Ltd.
+- symbol: PLTR
+  name: Palantir Technologies Inc. Class A Common Stock
+- symbol: STX
+  name: Seagate Technology Holdings PLC Ordinary Shares (Ireland)
+- symbol: NFLX
+  name: Netflix, Inc. Common Stock
+- symbol: AMAT
+  name: Applied Materials, Inc. Common Stock
+- symbol: LITE
+  name: Lumentum Holdings Inc. Common Stock
+- symbol: WDC
+  name: Western Digital Corporation Common Stock
+- symbol: NBIS
+  name: Nebius Group N.V. Class A Ordinary Shares
+- symbol: LLY
+  name: Eli Lilly & Co.
+- symbol: ASML
+  name: ASML Holding N.V. New York Registry Shares
+- symbol: BAC
+  name: Bank of America Corporation
+- symbol: ORCL
+  name: Oracle Corp
+- symbol: MRVL
+  name: Marvell Technology, Inc. Common Stock
+- symbol: CRM
+  name: Salesforce, Inc.
+- symbol: WMT
+  name: Walmart Inc. Common Stock
+- symbol: LRCX
+  name: Lam Research Corporation Common Stock
+- symbol: DELL
+  name: Dell Technologies Inc.
+- symbol: GEV
+  name: GE Vernova Inc.
+- symbol: NOW
+  name: SERVICENOW, INC.
+- symbol: CAT
+  name: Caterpillar Inc.
+- symbol: BE
+  name: Bloom Energy Corporation
+- symbol: V
+  name: VISA Inc.
+- symbol: PANW
+  name: Palo Alto Networks, Inc. Common Stock
+- symbol: CSCO
+  name: Cisco Systems, Inc. Common Stock (DE)
+- symbol: MA
+  name: Mastercard Incorporated
+- symbol: SNOW
+  name: Snowflake Inc.
+- symbol: COHR
+  name: Coherent Corp.
+- symbol: KO
+  name: Coca-Cola Company
+- symbol: KLAC
+  name: KLA Corporation Common Stock
+- symbol: BSX
+  name: Boston Scientific Corp.
+- symbol: UNH
+  name: UNITEDHEALTH GROUP INCORPORATED (Delaware)
+- symbol: APP
+  name: Applovin Corporation Class A Common Stock
+- symbol: TMO
+  name: Thermo Fisher Scientific, Inc.
+- symbol: JNJ
+  name: Johnson & Johnson
+- symbol: TXN
+  name: Texas Instruments Incorporated Common Stock
+- symbol: UBER
+  name: Uber Technologies, Inc.
+- symbol: INTU
+  name: Intuit Inc. Common Stock
+- symbol: GLW
+  name: Corning Incorporated
+- symbol: VRT
+  name: Vertiv Holdings Co Class A Common Stock
+- symbol: SMCI
+  name: Super Micro Computer, Inc. Common Stock
+- symbol: JPM
+  name: JPMorgan Chase & Co.
+- symbol: GS
+  name: Goldman Sachs Group Inc.
+- symbol: DHR
+  name: Danaher Corporation
+- symbol: XOM
+  name: ExxonMobil Holdings Corporation
+- symbol: CRWV
+  name: CoreWeave, Inc. Class A Common Stock
+- symbol: HOOD
+  name: Robinhood Markets, Inc. Class A Common Stock
+- symbol: ANET
+  name: Arista Networks
+- symbol: VZ
+  name: Verizon Communications
+- symbol: T
+  name: AT&T Inc.
+- symbol: SPOT
+  name: Spotify Technology S.A.
+- symbol: CRWD
+  name: CrowdStrike Holdings, Inc. Class A Common Stock
+- symbol: MRNA
+  name: Moderna, Inc. Common Stock
+- symbol: MSTR
+  name: Strategy Inc Common Stock Class A
+- symbol: IBM
+  name: International Business Machines Corporation
+- symbol: QCOM
+  name: QUALCOMM Incorporated Common Stock
+- symbol: IREN
+  name: IREN Limited Ordinary Shares
+- symbol: PG
+  name: Procter & Gamble Company
+- symbol: CBRS
+  name: Cerebras Systems Inc. Class A Common Stock
+- symbol: SHOP
+  name: Shopify Inc. Class A subordinate voting shares
+- symbol: FCX
+  name: Freeport-McMoran Inc.
+- symbol: BA
+  name: Boeing Company
+- symbol: COST
+  name: Costco Wholesale Corporation Common Stock
+- symbol: PFE
+  name: Pfizer Inc.
+- symbol: ABBV
+  name: ABBVIE INC.
+- symbol: ADI
+  name: Analog Devices, Inc. Common Stock
+- symbol: CVX
+  name: Chevron Corporation
+- symbol: DDOG
+  name: Datadog, Inc. Class A Common Stock
+- symbol: NEE
+  name: NextEra Energy, Inc.
+- symbol: NOK
+  name: Nokia Corporation
+- symbol: GE
+  name: GE Aerospace
+- symbol: APH
+  name: Amphenol Corporation
+- symbol: WFC
+  name: Wells Fargo & Co.
+- symbol: ISRG
+  name: Intuitive Surgical, Inc. Common Stock
+- symbol: BKNG
+  name: Booking Holdings Inc. Common Stock
+- symbol: TER
+  name: Teradyne, Inc. Common Stock
+- symbol: MRK
+  name: Merck & Co., Inc.
+- symbol: NET
+  name: Cloudflare, Inc. Class A common stock, par value $0.001 per share
+- symbol: HD
+  name: Home Depot, Inc.
+- symbol: MPWR
+  name: Monolithic Power Systems, Inc. Common Stock
+- symbol: CRDO
+  name: Credo Technology Group Holding Ltd Ordinary Shares
+- symbol: CLS
+  name: Celestica, Inc.
+- symbol: ADBE
+  name: Adobe Inc. Common Stock
+- symbol: HPE
+  name: Hewlett Packard Enterprise Company
+- symbol: ALAB
+  name: Astera Labs, Inc. Common Stock
+- symbol: ABT
+  name: Abbott Laboratories
+- symbol: PWR
+  name: Quanta Services, Inc.
+- symbol: NKE
+  name: Nike, Inc.
+- symbol: ACN
+  name: Accenture PLC
+- symbol: MCD
+  name: McDonald's Corporation
+- symbol: DIS
+  name: The Walt Disney Company
+- symbol: DASH
+  name: DoorDash, Inc. Class A Common Stock
+- symbol: MS
+  name: Morgan Stanley
+- symbol: CMG
+  name: Chipotle Mexican Grill, Inc.
+- symbol: SPGI
+  name: S&P Global Inc.
+- symbol: CDNS
+  name: Cadence Design Systems, Inc. Common Stock
+- symbol: CIEN
+  name: Ciena Corporation
+- symbol: C
+  name: Citigroup Inc.
+- symbol: PCG
+  name: PG&E Corporation
+- symbol: COP
+  name: ConocoPhillips
+- symbol: BLK
+  name: Blackrock, Inc.
+- symbol: UNP
+  name: Union Pacific Corp.
+- symbol: ETN
+  name: Eaton Corporation, plc Ordinary Shares
+- symbol: TJX
+  name: TJX Companies, Inc. (The)
+- symbol: WBD
+  name: Warner Bros. Discovery, Inc. Series A Common Stock
+- symbol: RDDT
+  name: Reddit, Inc.
+- symbol: FIX
+  name: Comfort Systems USA, Inc.
+- symbol: WDAY
+  name: Workday, Inc. Class A Common Stock
+- symbol: NU
+  name: Nu Holdings Ltd.
+- symbol: COIN
+  name: Coinbase Global, Inc. Class A Common Stock
+- symbol: MDT
+  name: Medtronic plc
+- symbol: BMY
+  name: Bristol-Myers Squibb Co.
+- symbol: LIN
+  name: Linde plc Ordinary Shares
+- symbol: DE
+  name: Deere & Company
+- symbol: RTX
+  name: RTX Corporation
+- symbol: CVS
+  name: CVS HEALTH CORPORATION
+- symbol: SLB
+  name: SLB Limited
+- symbol: AXP
+  name: American Express Company
+- symbol: MCK
+  name: McKesson Corporation
+- symbol: PM
+  name: Philip Morris International Inc.
+- symbol: NXPI
+  name: NXP Semiconductors N.V. Common Stock
+- symbol: CMCSA
+  name: Comcast Corporation Class A Common Stock
+- symbol: CSX
+  name: CSX Corporation Common Stock
+- symbol: SYK
+  name: Stryker Corporation
+- symbol: MDB
+  name: MongoDB, Inc. Class A Common Stock
+- symbol: MPC
+  name: MARATHON PETROLEUM CORPORATION
+- symbol: TDG
+  name: TransDigm Group Incorporated
+- symbol: EQIX
+  name: Equinix, Inc. Common Stock REIT
+- symbol: MO
+  name: Altria Group, Inc.
+- symbol: MELI
+  name: MercadoLibre, Inc. Common Stock
+- symbol: ABNB
+  name: Airbnb, Inc. Class A Common Stock
+- symbol: VLO
+  name: Valero Energy Corporation
+- symbol: TEL
+  name: TE Connectivity plc
+- symbol: AZN
+  name: AstraZeneca PLC
+- symbol: AMGN
+  name: Amgen Inc. Common Stock
+- symbol: PYPL
+  name: PayPal Holdings, Inc. Common Stock
+- symbol: PH
+  name: Parker-Hannifin Corporation
+- symbol: SNPS
+  name: Synopsys, Inc. Common Stock
+- symbol: FDX
+  name: FedEx Corporation
+- symbol: TMUS
+  name: T-Mobile US, Inc. Common Stock
+- symbol: CMI
+  name: Cummins Inc.
+- symbol: TEAM
+  name: Atlassian Corporation Class A Common Stock
+- symbol: RCL
+  name: Royal Caribbean Group
+- symbol: CIFR
+  name: Cipher Digital Inc. Common Stock
+- symbol: CVNA
+  name: Carvana Co.
+- symbol: MDLZ
+  name: Mondelez International, Inc. Class A Common Stock
+- symbol: B
+  name: Barrick Mining Corporation
+- symbol: URI
+  name: United Rentals, Inc.
+- symbol: DVN
+  name: Devon Energy Corporation
+- symbol: ROST
+  name: Ross Stores, Inc. Common Stock
+- symbol: NEM
+  name: Newmont Corporation
+- symbol: FERG
+  name: Ferguson Enterprises Inc.
+- symbol: HONA
+  name: Honeywell Aerospace Inc. Common Stock
+- symbol: NVO
+  name: Novo-Nordisk A/S
+- symbol: HPQ
+  name: HP Inc.
+- symbol: HLT
+  name: Hilton Worldwide Holdings Inc.
+- symbol: COF
+  name: Capital One Financial
+- symbol: SOFI
+  name: SoFi Technologies, Inc. Common Stock
+- symbol: CEG
+  name: Constellation Energy Corporation Common Stock
+- symbol: WULF
+  name: TeraWulf Inc. Common Stock
+- symbol: FTNT
+  name: Fortinet, Inc. Common Stock
+- symbol: HWM
+  name: Howmet Aerospace Inc.
+- symbol: BMNR
+  name: BitMine Immersion Technologies, Inc.
+- symbol: FN
+  name: Fabrinet
+- symbol: ALNY
+  name: Alnylam Pharmaceuticals, Inc. Common Stock
+- symbol: STM
+  name: STMicroelectronics N.V.
+- symbol: AEM
+  name: Agnico Eagle Mines Ltd.
+- symbol: TGT
+  name: Target Corporation
+- symbol: HCA
+  name: HCA Healthcare, Inc.
+- symbol: OXY
+  name: Occidental Petroleum Corporation
+- symbol: WELL
+  name: Welltower Inc.
+- symbol: GILD
+  name: Gilead Sciences, Inc. Common Stock
+- symbol: PEP
+  name: PepsiCo, Inc. Common Stock
+- symbol: MTZ
+  name: MasTec, Inc.
+- symbol: PSX
+  name: PHILLIPS 66
+- symbol: FIG
+  name: Figma, Inc.
+- symbol: LOW
+  name: Lowe's Companies Inc.
+- symbol: SAP
+  name: SAP SE
+- symbol: REGN
+  name: Regeneron Pharmaceuticals, Inc. Common Stock
+- symbol: ICE
+  name: Intercontinental Exchange  Inc.
+- symbol: AZO
+  name: AutoZone, Inc.
+- symbol: CCL
+  name: Carnival Corporation Ltd.
+- symbol: MCHP
+  name: Microchip Technology Incorporated Common Stock
+- symbol: EQT
+  name: EQT CORP
+- symbol: MLM
+  name: Martin Marietta Materials
+- symbol: TSCO
+  name: Tractor Supply Company Common Stock
+- symbol: BP
+  name: BP p.l.c.
+- symbol: AAOI
+  name: Applied Optoelectronics, Inc. Common Stock
+- symbol: CB
+  name: Chubb Limited
+- symbol: VST
+  name: Vistra Corp.
+- symbol: F
+  name: Ford Motor Company
+- symbol: BKR
+  name: Baker Hughes Company Class A Common Stock
+- symbol: SHW
+  name: The Sherwin-Williams Company
+- symbol: USB
+  name: U.S. Bancorp
+- symbol: TRV
+  name: The Travelers Companies, Inc.
+- symbol: VRTX
+  name: Vertex Pharmaceuticals Incorporated Common Stock
+- symbol: RKLB
+  name: Rocket Lab Corporation Common Stock
+- symbol: CME
+  name: CME Group Inc. Class A Common Stock
+- symbol: PGR
+  name: Progressive Corporation
+- symbol: BX
+  name: Blackstone Inc.
+- symbol: AAL
+  name: American Airlines Group Inc. Common Stock
+- symbol: U
+  name: Unity Software Inc.
+- symbol: IONQ
+  name: IonQ, Inc.
+- symbol: CRCL
+  name: Circle Internet Group, Inc.
+- symbol: 'ON'
+  name: ON Semiconductor Corporation Common Stock
+- symbol: TWLO
+  name: Twilio Inc.
+- symbol: TT
+  name: Trane Technologies plc
+- symbol: HON
+  name: Honeywell International Inc. Common Stock
+- symbol: MKSI
+  name: MKS Inc. Common Stock
+- symbol: ILMN
+  name: Illumina, Inc. Common Stock
+- symbol: MMM
+  name: 3M Company
+- symbol: CTSH
+  name: Cognizant Technology Solutions Corporation Class A Common Stock
+- symbol: PATH
+  name: UiPath, Inc.
+- symbol: ADP
+  name: Automatic Data Processing, Inc. Common Stock
+- symbol: HAL
+  name: Halliburton Company
+- symbol: FICO
+  name: Fair Isaac Corporation
+- symbol: TTWO
+  name: Take-Two Interactive Software, Inc. Common Stock
+- symbol: HUBS
+  name: HUBSPOT, INC.
+- symbol: SBUX
+  name: Starbucks Corporation Common Stock
+- symbol: LMT
+  name: Lockheed Martin Corp.
+- symbol: MSI
+  name: Motorola Solutions, Inc. New
+- symbol: WMB
+  name: Williams Companies Inc.
+- symbol: PLD
+  name: PROLOGIS, INC.
+- symbol: CRH
+  name: CRH Public Limited Company
+- symbol: MSCI
+  name: MSCI, Inc.
+- symbol: KEYS
+  name: Keysight Technologies, Inc.
+- symbol: EXPE
+  name: Expedia Group, Inc. Common Stock
+- symbol: SO
+  name: The Southern Company
+- symbol: MAR
+  name: Marriott International Class A Common Stock
+- symbol: PBR
+  name: PETROLEO BRASILEIRO S.A.-PETROBRAS ADS (REP 1 COMMON SHARE)
+- symbol: KKR
+  name: KKR & Co. Inc.
+- symbol: TSEM
+  name: Tower Semiconductor Ltd. Ordinary Shares
+- symbol: HUM
+  name: Humana Inc.
+- symbol: ORLY
+  name: O'Reilly Automotive, Inc. Common Stock
+- symbol: RIOT
+  name: Riot Platforms, Inc. Common Stock
+- symbol: BURL
+  name: BURLINGTON STORES, INC.
+- symbol: CNQ
+  name: Canadian Natural Resources Limited
+- symbol: CPRT
+  name: Copart, Inc. (DE) Common Stock
+- symbol: AXON
+  name: Axon Enterprise, Inc. Common Stock
+- symbol: COR
+  name: Cencora, Inc.
+- symbol: MNST
+  name: Monster Beverage Corporation
+- symbol: IDXX
+  name: IDEXX Laboratories, Inc. Common Stock
+- symbol: DKS
+  name: Dick's Sporting Goods, Inc.
+- symbol: LNG
+  name: Cheniere Energy Inc
+- symbol: KGC
+  name: Kinross Gold Corporation
+- symbol: ADSK
+  name: Autodesk, Inc. Common Stock
+- symbol: JCI
+  name: Johnson Controls International plc
+- symbol: FSLR
+  name: First Solar, Inc. Common Stock
+- symbol: KDP
+  name: Keurig Dr Pepper Inc. Common Stock
+- symbol: NTRA
+  name: Natera, Inc. Common Stock
+- symbol: RBLX
+  name: Roblox Corporation
+- symbol: XYZ
+  name: Block, Inc.
+- symbol: FLEX
+  name: Flex Ltd. Ordinary Shares
+- symbol: CRS
+  name: Carpenter Technology Corp
+- symbol: WM
+  name: Waste Management, Inc.
+- symbol: STRL
+  name: Sterling Infrastructure, Inc. Common Stock
+- symbol: KHC
+  name: The Kraft Heinz Company Common Stock
+- symbol: EOG
+  name: EOG Resources, Inc.
+- symbol: ROK
+  name: Rockwell Automation, Inc.
+- symbol: CHTR
+  name: Charter Communications, Inc. Class A Common Stock New
+- symbol: KR
+  name: The Kroger Co.
+- symbol: LHX
+  name: L3Harris Technologies, Inc.
+- symbol: CARR
+  name: Carrier Global Corporation
+- symbol: OKTA
+  name: Okta, Inc. Class A Common Stock
+- symbol: GIS
+  name: General Mills, Inc.
+- symbol: ONTO
+  name: Onto Innovation Inc.
+- symbol: TOST
+  name: Toast, Inc.
+- symbol: HBAN
+  name: Huntington Bancshares Incorporated Common Stock
+- symbol: WAT
+  name: Waters Corp
+- symbol: D
+  name: Dominion Energy, Inc Common Stock
+- symbol: ECL
+  name: Ecolab, Inc.
+- symbol: MCO
+  name: Moody's Corporation
+- symbol: KMI
+  name: Kinder Morgan, Inc.
+- symbol: NTAP
+  name: NetApp, Inc. Common Stock
+- symbol: IQV
+  name: IQVIA Holdings Inc.
+- symbol: ATI
+  name: ATI Inc.
+- symbol: NOC
+  name: Northrop Grumman Corp.
+- symbol: HL
+  name: Hecla Mining Company
+- symbol: FITB
+  name: Fifth Third Bancorp
+- symbol: CI
+  name: The Cigna Group
+- symbol: HUT
+  name: Hut 8 Corp. Common Stock
+- symbol: SMTC
+  name: Semtech Corporation Common Stock
+- symbol: TTMI
+  name: TTM Technologies, Inc. Common Stock
+- symbol: CDE
+  name: Coeur Mining, Inc.
+- symbol: AMT
+  name: American Tower Corporation
+- symbol: XEL
+  name: Xcel Energy Inc. Common Stock
+- symbol: TFC
+  name: Truist Financial Corporation
+- symbol: VEEV
+  name: Veeva Systems Inc.
+- symbol: UPS
+  name: United Parcel Service, Inc. Class B
+- symbol: DUK
+  name: Duke Energy Corporation
+- symbol: TPR
+  name: Tapestry, Inc. Common Stock
+- symbol: TRGP
+  name: Targa Resources Corp.
+- symbol: EBAY
+  name: eBay Inc. Common Stock
+- symbol: VALE
+  name: VALE S.A.
+- symbol: ALL
+  name: The Allstate Corporation
+- symbol: KVUE
+  name: Kenvue Inc.
+- symbol: FTAI
+  name: FTAI Aviation Ltd. Common Stock
+- symbol: CTVA
+  name: Corteva, Inc. Common Stock
+- symbol: AON
+  name: Aon plc Class A
+- symbol: DAL
+  name: Delta Air Lines, Inc.
+- symbol: GWW
+  name: W.W. Grainger, Inc.
+- symbol: EMR
+  name: Emerson Electric Co.
+- symbol: HUBB
+  name: Hubbell Incorporated
+- symbol: FAST
+  name: Fastenal Company Common Stock
+- symbol: SU
+  name: Suncor Energy, Inc.
+- symbol: VMC
+  name: Vulcan Materials Company(Holding Company)
+- symbol: APO
+  name: Apollo Global Management, Inc.
+- symbol: ULTA
+  name: Ulta Beauty, Inc. Common Stock
+- symbol: PCAR
+  name: PACCAR Inc. Common Stock
+- symbol: GM
+  name: General Motors Company
+- symbol: AKAM
+  name: Akamai Technologies, Inc. Common Stock
+- symbol: RKT
+  name: Rocket Companies, Inc.
+- symbol: ENB
+  name: Enbridge, Inc
+- symbol: ZTS
+  name: ZOETIS INC.
+- symbol: NVT
+  name: nVent Electric plc Ordinary Shares
+- symbol: DT
+  name: Dynatrace, Inc.
+- symbol: W
+  name: Wayfair Inc.
+- symbol: INSM
+  name: Insmed Incorporated Common Stock
+- symbol: MOD
+  name: Modine Manufacturing Co
+- symbol: CL
+  name: Colgate-Palmolive Company
+- symbol: DXCM
+  name: DexCom, Inc. Common Stock
+- symbol: EXC
+  name: Exelon Corporation Common Stock
+- symbol: ODFL
+  name: Old Dominion Freight Line, Inc. Common Stock
+- symbol: LPLA
+  name: LPL Financial Holdings Inc. Common Stock
+- symbol: CHRW
+  name: C.H. Robinson Worldwide, Inc. Common Stock
+- symbol: FIS
+  name: Fidelity National Information Services, Inc.
+- symbol: DOW
+  name: Dow Inc.
+- symbol: CAH
+  name: Cardinal Health, Inc.
+- symbol: DOCN
+  name: DigitalOcean Holdings, Inc.
+- symbol: WWD
+  name: Woodward, Inc. Common Stock
+- symbol: LII
+  name: Lennox International Inc.
+- symbol: FISV
+  name: Fiserv, Inc. Common Stock
+- symbol: AEP
+  name: American Electric Power Company, Inc. Common Stock
+- symbol: APLD
+  name: Applied Digital Corporation Common Stock
+- symbol: CNP
+  name: CenterPoint Energy, Inc.
+- symbol: ZS
+  name: Zscaler, Inc. Common Stock
+- symbol: BNY
+  name: Bank of New York Mellon Corporation
+- symbol: GH
+  name: Guardant Health, Inc. Common Stock
+- symbol: NUE
+  name: Nucor Corporation
+- symbol: PINS
+  name: Pinterest, Inc. Class A Common Stock
+- symbol: A
+  name: Agilent Technologies Inc.
+- symbol: IBKR
+  name: Interactive Brokers Group, Inc. Class A Common Stock
+- symbol: TYL
+  name: Tyler Technologies, Inc.
+- symbol: EME
+  name: EMCOR Group, Inc.
+- symbol: ELV
+  name: Elevance Health, Inc.
+- symbol: AJG
+  name: Arthur J. Gallagher & Co.
+- symbol: NI
+  name: NiSource Inc.
+- symbol: VRSK
+  name: Verisk Analytics, Inc. Common Stock
+- symbol: MRSH
+  name: Marsh
+- symbol: PPL
+  name: PPL Corporation
+- symbol: DKNG
+  name: DraftKings Inc. Class A Common Stock
+- symbol: CORZ
+  name: Core Scientific, Inc. Common Stock
+- symbol: YUM
+  name: Yum! Brands, Inc.
+- symbol: CPNG
+  name: Coupang, Inc.
+- symbol: RRX
+  name: Regal Rexnord Corporation
+- symbol: UAL
+  name: United Airlines Holdings, Inc. Common Stock
+- symbol: AXTI
+  name: AXT Inc Common Stock
+- symbol: UL
+  name: Unilever plc
+- symbol: IR
+  name: Ingersoll Rand Inc. Common Stock
+- symbol: VIK
+  name: Viking Holdings Ltd
+- symbol: NRG
+  name: NRG Energy, Inc.
+- symbol: EW
+  name: Edwards Lifesciences Corp
+- symbol: MTD
+  name: Mettler-Toledo International
+- symbol: BDX
+  name: Becton, Dickinson and Co.
+- symbol: RVMD
+  name: Revolution Medicines, Inc. Common Stock
+- symbol: SRE
+  name: Sempra
+- symbol: GD
+  name: General Dynamics Corporation
+- symbol: CTAS
+  name: Cintas Corporation Common Stock
+- symbol: MTSI
+  name: MACOM Technology Solutions Holdings, Inc. Common Stock
+- symbol: WAB
+  name: Wabtec Inc.
+- symbol: AFRM
+  name: Affirm Holdings, Inc. Class A Common Stock
+- symbol: RMD
+  name: ResMed Inc.
+- symbol: ARES
+  name: Ares Management Corporation Class A Common Stock
+- symbol: MDLN
+  name: Medline Inc. Class A common stock
+- symbol: DRI
+  name: Darden Restaurants, Inc.
+- symbol: LYV
+  name: Live Nation Entertainment Inc.
+- symbol: TLN
+  name: Talen Energy Corporation Common Stock
+- symbol: DPZ
+  name: Domino's Pizza Inc Common Stock
+- symbol: SN
+  name: SharkNinja, Inc.
+- symbol: CHYM
+  name: Chime Financial, Inc. Class A Common Stock
+- symbol: RIG
+  name: Transocean LTD.
+- symbol: MARA
+  name: MARA Holdings, Inc. Common Stock
+- symbol: EFX
+  name: Equifax, Incorporated
+- symbol: ASTS
+  name: AST SpaceMobile, Inc. Class A Common Stock
+- symbol: RF
+  name: Regions Financial Corp.
+- symbol: STLD
+  name: Steel Dynamics, Inc.
+- symbol: BN
+  name: Brookfield Corporation
+- symbol: O
+  name: Realty Income Corporation
+- symbol: ITW
+  name: Illinois Tool Works Inc.
+- symbol: GNRC
+  name: GENERAC HOLDINGS INC
+- symbol: ZM
+  name: Zoom Communications, Inc. Class A Common Stock
+- symbol: JBL
+  name: Jabil Inc.
+- symbol: CVE
+  name: Cenovus Energy Inc.
+- symbol: CRL
+  name: Charles River Laboratories International, Inc.
+- symbol: SAN
+  name: Banco Santander S.A.
+- symbol: APD
+  name: Air Products & Chemicals, Inc.
+- symbol: ECHO
+  name: EchoStar Corporation Common Stock
+- symbol: ENTG
+  name: Entegris, Inc. Common Stock
+- symbol: FIVE
+  name: Five Below, Inc. Common Stock
+- symbol: EAT
+  name: Brinker International, Inc.
+- symbol: OKE
+  name: Oneok, Inc.
+- symbol: CASY
+  name: Casey's General Stores, Inc. Common Stock
+- symbol: QXO
+  name: QXO, Inc.
+- symbol: KNX
+  name: Knight-Swift Transportation Holdings Inc. Class A Common Stock
+- symbol: FANG
+  name: Diamondback Energy, Inc. Common Stock
+- symbol: WCC
+  name: Wesco International Inc.
+- symbol: NSC
+  name: Norfolk Southern Corp.
+- symbol: AWK
+  name: American Water Works Company, Inc
+- symbol: CELH
+  name: Celsius Holdings, Inc. Common Stock
+- symbol: SWKS
+  name: Skyworks Solutions, Inc. Common Stock
+- symbol: PNC
+  name: PNC Financial Services Group
+- symbol: OVV
+  name: Ovintiv Inc.
+- symbol: UMC
+  name: United Microelectronic Corp.
+- symbol: CF
+  name: CF Industries Holding, Inc.
+- symbol: PSA
+  name: Public Storage
+- symbol: TTD
+  name: The Trade Desk, Inc. Class A Common Stock
+- symbol: ADM
+  name: Archer Daniels Midland Company
+- symbol: PAAS
+  name: Pan American Silver Corp.
+- symbol: AME
+  name: Ametek, Inc.
+- symbol: DHI
+  name: D.R. Horton Inc.
+- symbol: USFD
+  name: US Foods Holding Corp.
+- symbol: DG
+  name: Dollar General Corp.
+- symbol: VMRK
+  name: Vivmark Residential
+- symbol: RIO
+  name: Rio Tinto plc
+- symbol: DLTR
+  name: Dollar Tree Inc. Common Stock
+- symbol: FFIV
+  name: F5, Inc. Common Stock
+- symbol: PODD
+  name: Insulet Corporation Common Stock
+- symbol: SITM
+  name: SiTime Corporation Common Stock
+- symbol: ROP
+  name: Roper Technologies, Inc. Common Stock
+- symbol: CFG
+  name: Citizens Financial Group, Inc.
+- symbol: RSG
+  name: Republic Services Inc.
+- symbol: THC
+  name: Tenet Healthcare Corporation New
+- symbol: ZBRA
+  name: Zebra Technologies Corporation Class A Common Stock
+- symbol: HST
+  name: Host Hotels & Resorts, Inc. Common Stock
+- symbol: FTI
+  name: TechnipFMC plc Ordinary Share
+- symbol: ONDS
+  name: Ondas Inc. Common Stock
+- symbol: CDW
+  name: CDW Corporation Common Stock
+- symbol: NXT
+  name: Nextpower Inc. Common Stock
+- symbol: SBAC
+  name: SBA Communications Corporation Class A Common Stock
+- symbol: NCLH
+  name: Norwegian Cruise Line Holdings Ltd. Ordinary Shares
+- symbol: WSM
+  name: Williams-Sonoma, Inc.
+- symbol: CP
+  name: Canadian Pacific Kansas City Limited
+- symbol: GEHC
+  name: GE HealthCare Technologies Inc. Common Stock
+- symbol: LVS
+  name: Las Vegas Sands Corp.
+- symbol: RIVN
+  name: Rivian Automotive, Inc. Class A Common Stock
+- symbol: PR
+  name: Permian Resources Corporation
+- symbol: ETSY
+  name: Etsy, Inc.
+- symbol: WPM
+  name: Wheaton Precious Metals Corp. Common Stock
+- symbol: ROL
+  name: Rollins, Inc.
+- symbol: KMB
+  name: Kimberly-Clark Corporation Common Stock
+- symbol: ROKU
+  name: Roku, Inc. Class A Common Stock
+- symbol: MET
+  name: MetLife, Inc.
+- symbol: HIMS
+  name: Hims & Hers Health, Inc.
+- symbol: CCJ
+  name: Cameco Corporation
+- symbol: P
+  name: Everpure, Inc.
+- symbol: NVS
+  name: Novartis AG
+- symbol: LULU
+  name: lululemon athletica inc. Common Stock
+- symbol: JHX
+  name: James Hardie Industries plc
+- symbol: KEY
+  name: KeyCorp
+- symbol: TECK
+  name: Teck Resources Limited
+- symbol: CMS
+  name: CMS Energy Corporation
+- symbol: EIX
+  name: Edison International
+- symbol: JBHT
+  name: J.B. Hunt Transport Services, Inc. Common Stock
+- symbol: CRBG
+  name: Corebridge Financial, Inc.
+- symbol: PAYX
+  name: Paychex, Inc. Common Stock
+- symbol: RL
+  name: Ralph Lauren Corporation
+- symbol: SYF
+  name: SYNCHRONY FINANCIAL
+- symbol: CSGP
+  name: CoStar Group, Inc. Common Stock
+- symbol: SAIA
+  name: Saia, Inc. Common Stock
+- symbol: SW
+  name: Smurfit WestRock plc
+- symbol: CCI
+  name: Crown Castle Inc.
+- symbol: FOXA
+  name: Fox Corporation Class A Common Stock
+- symbol: CLSK
+  name: CleanSpark, Inc. Common Stock
+- symbol: NBIX
+  name: Neurocrine Biosciences, Inc. Common Stock
+- symbol: QSR
+  name: Restaurant Brands International Inc.
+- symbol: HDB
+  name: HDFC Bank Limited
+- symbol: APA
+  name: APA Corporation Common Stock
+- symbol: RBRK
+  name: Rubrik, Inc.
+- symbol: AU
+  name: AngloGold Ashanti plc
+- symbol: VICI
+  name: VICI Properties Inc. Common Stock
+- symbol: ASX
+  name: ASE Technology Holding Co., Ltd.
+- symbol: FPS
+  name: Forgent Power Solutions, Inc.
+- symbol: ONON
+  name: On Holding AG
+- symbol: EXE
+  name: Expand Energy Corporation Common Stock
+- symbol: UTHR
+  name: United Therapeutics Corporation Common Stock
+- symbol: RGEN
+  name: Repligen Corporation Common Stock
+- symbol: VRSN
+  name: VeriSign, Inc. Common Stock
+- symbol: CNC
+  name: Centene Corporation
+- symbol: EL
+  name: The Estee Lauder Companies Inc. Class A
+- symbol: GRMN
+  name: Garmin Ltd
+- symbol: SOLS
+  name: Solstice Advanced Materials Inc. Common Stock
+- symbol: FLUT
+  name: Flutter Entertainment plc
+- symbol: HSY
+  name: The Hershey Company
+- symbol: CLX
+  name: Clorox Company
+- symbol: DY
+  name: Dycom Industries, Inc.
+- symbol: CW
+  name: Curtiss-Wright Corp.
+- symbol: LSCC
+  name: Lattice Semiconductor Corporation Common Stock
+- symbol: SGI
+  name: Somnigroup International Inc.
+- symbol: WTW
+  name: Willis Towers Watson Public Limited Company Ordinary Shares
+- symbol: OWL
+  name: Blue Owl Capital Inc.
+- symbol: ZBH
+  name: Zimmer Biomet Holdings, Inc.
+- symbol: LH
+  name: Labcorp Holdings Inc.
+- symbol: S
+  name: SentinelOne, Inc.
+- symbol: OTIS
+  name: Otis Worldwide Corporation
+- symbol: QBTS
+  name: D-Wave Quantum Inc. Common Stock
+- symbol: GTLB
+  name: GitLab Inc. Class A Common Stock
+- symbol: STZ
+  name: Constellation Brands, Inc.
+- symbol: MKTX
+  name: MarketAxess Holdings, Inc. Common Stock
+- symbol: CNH
+  name: CNH INDUSTRIAL N.V.
+- symbol: DOV
+  name: Dover Corporation
+- symbol: LUV
+  name: Southwest Airlines Co.
+- symbol: CPAY
+  name: Corpay, Inc.
+- symbol: AS
+  name: Amer Sports, Inc.
+- symbol: BAX
+  name: Baxter International Inc.
+- symbol: WCN
+  name: Waste Connections, Inc.
+- symbol: STT
+  name: State Street Corporation
+- symbol: NDAQ
+  name: Nasdaq, Inc. Common Stock
+- symbol: WST
+  name: West Pharmaceutical Services, Inc.
+- symbol: Q
+  name: Qnity Electronics, Inc.
+- symbol: SPG
+  name: Simon Property Group, Inc.
+- symbol: FROG
+  name: JFrog Ltd. Ordinary Shares
+- symbol: IOT
+  name: Samsara Inc.
+- symbol: TDY
+  name: Teledyne Technologies Incorporated
+- symbol: VG
+  name: Venture Global, Inc.
+- symbol: BBY
+  name: Best Buy Company, Inc.
+- symbol: SNAP
+  name: Snap Inc.
+- symbol: AGI
+  name: Alamos Gold Inc. Class A Common Shares
+- symbol: SYY
+  name: Sysco Corporation
+- symbol: AEIS
+  name: Advanced Energy Industries, Inc. Common Stock
+- symbol: SUNB
+  name: Sunbelt Rentals Holdings, Inc.
+- symbol: LYB
+  name: LyondellBasell Industries N.V. Class A
+- symbol: GWRE
+  name: GUIDEWIRE SOFTWARE, INC.
+- symbol: FE
+  name: FirstEnergy Corp.
+- symbol: FNV
+  name: Franco-Nevada Corporation
+- symbol: TEM
+  name: Tempus AI, Inc. Class A Common Stock
+- symbol: IP
+  name: International Paper Co.
+- symbol: CNI
+  name: Canadian National Railway
+- symbol: IT
+  name: Gartner, Inc.
+- symbol: VTR
+  name: Ventas, Inc.
+- symbol: TXRH
+  name: Texas Roadhouse, Inc. Common Stock
+- symbol: AMKR
+  name: Amkor Technology, Inc. Common Stock
+- symbol: DECK
+  name: Deckers Outdoor Corp
+- symbol: DGX
+  name: Quest Diagnostics Inc.
+- symbol: MOS
+  name: The Mosaic Company
+- symbol: DINO
+  name: HF Sinclair Corporation
+- symbol: JAZZ
+  name: Jazz Pharmaceuticals plc Common Stock (Ireland)
+- symbol: ELAN
+  name: Elanco Animal Health Incorporated Common Stock
+- symbol: FDS
+  name: Factset Research Systems
+- symbol: SUI
+  name: Sun Communities, Inc
+- symbol: EVR
+  name: Evercore Inc.
+- symbol: TRI
+  name: Thomson Reuters Corporation Common Shares
+- symbol: AUR
+  name: Aurora Innovation, Inc. Class A Common Stock
+- symbol: ALLE
+  name: Allegion Public Limited Company
+- symbol: LYFT
+  name: Lyft, Inc. Class A Common Stock
+- symbol: PCOR
+  name: Procore Technologies, Inc.
+- symbol: ESTC
+  name: Elastic N.V.
+- symbol: MDGL
+  name: Madrigal Pharmaceuticals, Inc. Common Stock
+- symbol: OMC
+  name: Omnicom Group Inc.
+- symbol: TWST
+  name: Twist Bioscience Corporation Common Stock
+- symbol: ALB
+  name: Albemarle Corporation
+- symbol: RVTY
+  name: Revvity, Inc.
+- symbol: XPO
+  name: XPO, Inc.
+- symbol: EPD
+  name: Enterprise Products Partners L.P.
+- symbol: RY
+  name: Royal Bank of Canada
+- symbol: AMP
+  name: Ameriprise Financial, Inc.
+- symbol: NVR
+  name: NVR, Inc.
+- symbol: GEN
+  name: Gen Digital Inc. Common Stock
+- symbol: SCCO
+  name: Southern Copper Corporation
+- symbol: CBRE
+  name: CBRE GROUP, INC.
+- symbol: ROIV
+  name: Roivant Sciences Ltd. Common Shares
+- symbol: GAP
+  name: The Gap, Inc.
+- symbol: FWONK
+  name: Liberty Media Corporation Series C Liberty Formula One Common Stock
+- symbol: PTC
+  name: PTC Inc. Common Stock
+- symbol: ITT
+  name: ITT Inc.
+- symbol: AMRZ
+  name: Amrize Ltd
+- symbol: XYL
+  name: Xylem Inc
+- symbol: LNT
+  name: Alliant Energy Corporation Common Stock
+- symbol: LEN
+  name: Lennar Corporation Class A
+- symbol: MANH
+  name: Manhattan Associates, Inc. Common Stock
+- symbol: CSL
+  name: Carlisle Companies, Inc.
+- symbol: AA
+  name: Alcoa Corporation
+- symbol: IBN
+  name: ICICI Bank Limited
+- symbol: CHWY
+  name: Chewy, Inc.
+- symbol: APTV
+  name: Aptiv PLC
+- symbol: TECH
+  name: Bio-Techne Corp Common Stock
+- symbol: H
+  name: Hyatt Hotels Corporation
+- symbol: CLH
+  name: Clean Harbors, Inc
+- symbol: RGTI
+  name: Rigetti Computing, Inc. Common Stock
+- symbol: MEDP
+  name: Medpace Holdings, Inc. Common Stock
+- symbol: PBF
+  name: PBF ENERGY INC.
+- symbol: MTB
+  name: M&T Bank Corp.
+- symbol: RBA
+  name: RB Global, Inc.
+- symbol: ICLR
+  name: ICON plc Ordinary Shares
+- symbol: NTR
+  name: Nutrien Ltd. Common Shares
+- symbol: BROS
+  name: Dutch Bros Inc.
+- symbol: AG
+  name: FIRST MAJESTIC SILVER CORP
+- symbol: NVMI
+  name: Nova Ltd. Ordinary Shares
+- symbol: MUSA
+  name: MURPHY USA INC.
+- symbol: HALO
+  name: Halozyme Therapeutics, Inc. Common Stock
+- symbol: HEI
+  name: HEICO Corporation
+- symbol: SMR
+  name: NuScale Power Corporation
+- symbol: MP
+  name: MP Materials Corp.
+- symbol: GPN
+  name: Global Payments, Inc.
+- symbol: OKLO
+  name: Oklo Inc.
+- symbol: AR
+  name: ANTERO RESOURCES CORPORATION
+- symbol: CAKE
+  name: Cheesecake Factory Incorporated (The) Common Stock
+- symbol: AIG
+  name: American International Group, Inc.
+- symbol: GDDY
+  name: GoDaddy Inc
+- symbol: WING
+  name: Wingstop Inc. Common Stock
+- symbol: RPRX
+  name: Royalty Pharma plc Class A Ordinary Shares
+- symbol: ETR
+  name: Entergy Corporation
+- symbol: BR
+  name: Broadridge Financial Solutions Inc
+- symbol: CAVA
+  name: CAVA Group, Inc.
+- symbol: CART
+  name: Maplebear Inc. Common Stock
+- symbol: BIIB
+  name: Biogen Inc. Common Stock
+- symbol: MAS
+  name: Masco Corporation
+- symbol: ESI
+  name: Element Solutions Inc.
+- symbol: AFL
+  name: Aflac Inc.
+- symbol: RGLD
+  name: Royal Gold, Inc. Common Stock
+- symbol: ZETA
+  name: Zeta Global Holdings Corp.
+- symbol: WSO
+  name: Watsco, Inc.
+- symbol: CAG
+  name: Conagra Brands, Inc.
+- symbol: ANF
+  name: Abercrombie & Fitch Co.
+- symbol: VICR
+  name: Vicor Corporation Common Stock
+- symbol: WYNN
+  name: Wynn Resorts, Limited Common stock
+- symbol: CACI
+  name: CACI INTERNATIONAL CLA
+- symbol: STE
+  name: STERIS plc
+- symbol: CLF
+  name: Cleveland-Cliffs Inc.
+- symbol: PURR
+  name: Hyperliquid Strategies Inc Common Stock
+- symbol: AVTR
+  name: Avantor, Inc.
+- symbol: COMP
+  name: Compass, Inc.
+- symbol: PNR
+  name: Pentair plc
+- symbol: CCEP
+  name: Coca-Cola Europacific Partners plc Ordinary Shares
+- symbol: BIDU
+  name: Baidu, Inc. ADS
+- symbol: JLL
+  name: Jones Lang LaSalle, Inc.
+- symbol: LECO
+  name: Lincoln Electric Holdings, Inc. Common Shares
+- symbol: USAR
+  name: USA Rare Earth, Inc. Class A Common Stock
+- symbol: MOH
+  name: Molina Healthcare, Inc.
+- symbol: SNX
+  name: TD SYNNEX Corporation
+- symbol: TPG
+  name: TPG Inc. Class A Common Stock
+- symbol: RMBS
+  name: Rambus Inc. Common Stock
+- symbol: DBX
+  name: Dropbox, Inc. Class A Common Stock
+- symbol: PKG
+  name: Packaging Corp of America
+- symbol: IRM
+  name: Iron Mountain Inc.
+- symbol: MGY
+  name: Magnolia Oil & Gas Corporation Class A Common Stock
+- symbol: TD
+  name: Toronto Dominion Bank
+- symbol: PAYC
+  name: PAYCOM SOFTWARE, INC.
+- symbol: HII
+  name: Huntington Ingalls Industries, Inc.
+- symbol: TW
+  name: Tradeweb Markets Inc. Class A Common Stock
+- symbol: GFS
+  name: GlobalFoundries Inc. Ordinary Shares
+- symbol: HBM
+  name: Hudbay Minerals Inc.
+- symbol: HIG
+  name: The Hartford Insurance Group, Inc.
+- symbol: LNTH
+  name: Lantheus Holdings, Inc. Common Stock
+- symbol: FND
+  name: Floor & Decor Holdings, Inc.
+- symbol: FLS
+  name: Flowserve Corporation
+- symbol: MHK
+  name: Mohawk Industries, Inc.
+- symbol: EQH
+  name: Equitable Holdings, Inc.
+- symbol: PPG
+  name: PPG Industries, Inc.
+- symbol: BRO
+  name: Brown & Brown, Inc.
+- symbol: VTRS
+  name: Viatris Inc. Common Stock
+- symbol: BEN
+  name: Franklin Templeton, Inc.
+- symbol: SEI
+  name: Solaris Energy Infrastructure, Inc.
+- symbol: UDR
+  name: UDR, Inc.
+- symbol: BJ
+  name: BJs Wholesale Club Holdings, Inc. Common Stock
+- symbol: MXL
+  name: MaxLinear, Inc. Common Stock
+- symbol: POOL
+  name: Pool Corporation Common Stock
+- symbol: ED
+  name: Consolidated Edison, Inc.
+- symbol: DAR
+  name: DARLING INGREDIENTS INC.
+- symbol: DOCU
+  name: DocuSign, Inc. Common Stock
+- symbol: KVYO
+  name: Klaviyo, Inc.
+- symbol: PFGC
+  name: Performance Food Group Company
+- symbol: RJF
+  name: Raymond James Financial, Inc.
+- symbol: CG
+  name: The Carlyle Group Inc. Common Stock
+- symbol: WEC
+  name: WEC Energy Group, Inc.
+- symbol: BNS
+  name: Bank of Nova Scotia
+- symbol: PRU
+  name: Prudential Financial, Inc.
+- symbol: IAG
+  name: IAMGold Corporation
+- symbol: RACE
+  name: Ferrari N.V.
+- symbol: AGNC
+  name: AGNC Investment Corp. Common Stock
+- symbol: AER
+  name: Aercap Holdings N.V.
+- symbol: PEG
+  name: Public Service Enterprise Group Incorporated
+- symbol: FDXF
+  name: FedEx Freight Holding Company, Inc.
+- symbol: AGX
+  name: Argan, Inc
+- symbol: ALC
+  name: Alcon Inc. Ordinary Shares
+- symbol: BTDR
+  name: Bitdeer Technologies Group Class A Ordinary Shares
+- symbol: DTM
+  name: DT Midstream, Inc.
+- symbol: ASND
+  name: Ascendis Pharma A/S Ordinary Share
+- symbol: GLPI
+  name: Gaming and Leisure Properties, Inc. Common Stock
+- symbol: FCNCA
+  name: First Citizens BancShares, Inc. Class A Common Stock
+- symbol: TRMB
+  name: Trimble Inc. Common Stock
+- symbol: AMCR
+  name: Amcor plc Ordinary Shares
+- symbol: GPC
+  name: Genuine Parts Company
+- symbol: PFG
+  name: Principal Financial Group Inc Common Stock
+- symbol: AVY
+  name: Avery Dennison Corp.
+- symbol: TKO
+  name: TKO Group Holdings, Inc.
+- symbol: SANM
+  name: Sanmina Corporation Common Stock
+- symbol: IEX
+  name: IDEX Corporation
+- symbol: EXPD
+  name: Expeditors International of Washington, Inc.
+- symbol: TRU
+  name: TransUnion
+- symbol: TXG
+  name: 10x Genomics, Inc. Class A Common Stock
+- symbol: NTNX
+  name: Nutanix, Inc. Class A Common Stock
+- symbol: ALGN
+  name: Align Technology, Inc. Common Stock
+- symbol: CHD
+  name: Church & Dwight Co., Inc.
+- symbol: SWK
+  name: Stanley Black & Decker, Inc.
+- symbol: INCY
+  name: Incyte Corp. Common Stock
+- symbol: MTCH
+  name: Match Group, Inc. Common Stock
+- symbol: QGEN
+  name: QIAGEN N.V.
+- symbol: BTSG
+  name: BrightSpring Health Services, Inc. Common Stock
+- symbol: DD
+  name: DuPont de Nemours, Inc. Common Stock
+- symbol: VIAV
+  name: Viavi Solutions Inc. Common Stock
+- symbol: TROW
+  name: T. Rowe Price Group, Inc. Common Stock
+- symbol: DUOL
+  name: Duolingo, Inc. Class A Common Stock
+- symbol: TRP
+  name: TC Energy Corporation
+- symbol: NYT
+  name: New York Times Co.
+- symbol: BRKR
+  name: Bruker Corporation Common Stock
+- symbol: AGCO
+  name: AGCO Corporation
+- symbol: CPB
+  name: The Campbell's Company Common Stock
+- symbol: RS
+  name: Reliance, Inc.
+- symbol: AAON
+  name: AAON, Inc. Common Stock
+- symbol: ELF
+  name: e.l.f. Beauty, Inc.
+- symbol: ARMK
+  name: ARAMARK
+- symbol: BUD
+  name: Anheuser-Busch INBEV SA/NV
+- symbol: SFM
+  name: Sprouts Farmers Market, Inc. Common Stock
+- symbol: COLB
+  name: Columbia Banking System, Inc. Common Stock
+- symbol: FHN
+  name: First Horizon Corporation
+- symbol: AHR
+  name: American Healthcare REIT, Inc.
+- symbol: CHKP
+  name: Check Point Software Technologies Ltd. Ordinary Shares
+- symbol: PHM
+  name: Pultegroup, Inc.
+- symbol: OLLI
+  name: Ollie's Bargain Outlet Holdings, Inc. Common Stock
+- symbol: UHS
+  name: Universal Health Services, Inc. Class B
+- symbol: APGE
+  name: Apogee Therapeutics, Inc. Common Stock
+- symbol: RBC
+  name: RBC Bearings Incorporated
+- symbol: BBIO
+  name: BridgeBio Pharma, Inc. Common Stock
+- symbol: AXSM
+  name: Axsome Therapeutics, Inc. Common Stock
+- symbol: BOOT
+  name: Boot Barn Holdings, Inc.
+- symbol: LDOS
+  name: Leidos Holdings, Inc.
+- symbol: AEE
+  name: Ameren Corporation
+- symbol: BLDR
+  name: Builders FirstSource, Inc.
+- symbol: VSXY
+  name: Victorias Secret & Co.
+- symbol: DTE
+  name: DTE Energy Company
+- symbol: SJM
+  name: The J.M. Smucker Company
+- symbol: CX
+  name: Cemex S.A.B. de C.V.
+- symbol: EVRG
+  name: Evergy, Inc. Common Stock
+- symbol: IONS
+  name: Ionis Pharmaceuticals, Inc. Common Stock
+- symbol: TENB
+  name: Tenable Holdings, Inc. Common Stock
+- symbol: SIRI
+  name: SiriusXM Holdings Inc. Common Stock
+- symbol: GKOS
+  name: Glaukos Corporation
+- symbol: ACHR
+  name: Archer Aviation Inc.
+- symbol: PTEN
+  name: Patterson-UTI Energy, Inc. Common Stock
+- symbol: EPAM
+  name: EPAM SYSTEMS, INC.
+- symbol: OSK
+  name: Oshkosh Corp.
+- symbol: INIO
+  name: INNIO N.V. Ordinary Shares
+- symbol: HAS
+  name: Hasbro, Inc. Common Stock
+- symbol: LAD
+  name: Lithia Motors, Inc.
+- symbol: JKHY
+  name: Jack Henry & Associates, Inc. Common Stock
+- symbol: ITGR
+  name: Integer Holdings Corporation
+- symbol: INVH
+  name: Invitation Homes Inc. Common Stock
+- symbol: VFC
+  name: V.F. Corporation
+- symbol: JBS
+  name: JBS N.V.
+- symbol: TXT
+  name: Textron, Inc.
+- symbol: BBWI
+  name: Bath & Body Works, Inc.
+- symbol: Z
+  name: Zillow Group, Inc. Class C Capital Stock
+- symbol: CYTK
+  name: Cytokinetics, Incorporated Common Stock
+- symbol: QLYS
+  name: Qualys, Inc. Common Stock
+- symbol: MKC
+  name: McCormick & Company, Incorporated Non-VTG CS
+- symbol: BZ
+  name: KANZHUN LIMITED American Depository Shares
+- symbol: TKR
+  name: The Timken Company
+- symbol: BG
+  name: Bunge Global SA
+- symbol: VISN
+  name: Vistance Networks, Inc. Common Stock
+- symbol: FLR
+  name: Fluor Corporation
+- symbol: TSN
+  name: Tyson Foods, Inc.
+- symbol: SSNC
+  name: SS&C Technologies Holdings, Inc. Common Stock
+- symbol: BMRN
+  name: BioMarin Pharmaceutical Inc. Common Stock
+- symbol: VSH
+  name: Vishay Intertechnology, Inc.
+- symbol: OSCR
+  name: Oscar Health, Inc.
+- symbol: STLA
+  name: Stellantis N.V.
+- symbol: LFUS
+  name: Littelfuse, Inc. Common Stock
+- symbol: OC
+  name: Owens Corning
+- symbol: ALLY
+  name: Ally Financial Inc.
+- symbol: PRAX
+  name: Praxis Precision Medicines, Inc. Common Stock
+- symbol: EXR
+  name: Extra Space Storage, Inc.
+- symbol: DVA
+  name: DaVita Inc.
+- symbol: BWXT
+  name: BWX Technologies, Inc.
+- symbol: KMX
+  name: CarMax Inc.
+- symbol: VLTO
+  name: Veralto Corporation
+- symbol: SM
+  name: SM Energy Company
+- symbol: PAG
+  name: Penske Automotive Group, Inc.
+- symbol: ACGL
+  name: Arch Capital Group Ltd. Common Stock
+- symbol: FIGR
+  name: Figure Technology Solutions, Inc. Class A Common Stock
+- symbol: UBS
+  name: UBS Group AG
+- symbol: WY
+  name: Weyerhaeuser Company
+- symbol: EXP
+  name: Eagle Materials, Inc.
+- symbol: FBIN
+  name: Fortune Brands Innovations, Inc.
+- symbol: HRL
+  name: Hormel Foods Corporation
+- symbol: JOBY
+  name: Joby Aviation, Inc.
+- symbol: CAI
+  name: Caris Life Sciences, Inc. Common Stock
+- symbol: SARO
+  name: StandardAero, Inc.
+- symbol: NWSA
+  name: News Corporation Class A Common Stock
+- symbol: GLXY
+  name: Galaxy Digital Inc. Class A Common Stock
+- symbol: CGNX
+  name: Cognex Corporation Common Stock
+- symbol: MNDY
+  name: monday.com Ltd. Ordinary Shares
+- symbol: WFRD
+  name: Weatherford International plc Ordinary Shares
+- symbol: ONB
+  name: Old National Bancorp Common Stock
+- symbol: M
+  name: Macy's Inc.
+- symbol: AEHR
+  name: Aehr Test Systems Common Stock
+- symbol: RDW
+  name: Redwire Corporation
+- symbol: KTOS
+  name: Kratos Defense & Security Solutions, Inc. Common Stock
+- symbol: BWA
+  name: BorgWarner Inc.
+- symbol: LTH
+  name: Life Time Group Holdings, Inc.
+- symbol: ZION
+  name: Zions Bancorporation N.A. Common Stock
+- symbol: WEX
+  name: WEX Inc.
+- symbol: BSY
+  name: Bentley Systems, Incorporated Class B Common Stock
+- symbol: DOCS
+  name: Doximity, Inc.
+- symbol: TTAN
+  name: ServiceTitan, Inc. Class A Common Stock
+- symbol: BAP
+  name: Credicorp LTD
+- symbol: DOC
+  name: Healthpeak Properties, Inc.
+- symbol: TIGO
+  name: Millicom International Cellular S.A. Common Stock
+- symbol: LOGI
+  name: Logitech International S.A. Ordinary Shares
+- symbol: CROX
+  name: Crocs, Inc. Common Stock
+- symbol: BAH
+  name: Booz Allen Hamilton Holding Corporation
+- symbol: TTE
+  name: TotalEnergies SE
+- symbol: ACM
+  name: Aecom
+- symbol: FTV
+  name: Fortive Corporation
+- symbol: KRMN
+  name: Karman Holdings Inc.
+- symbol: IFF
+  name: International Flavors & Fragrances Inc.
+- symbol: WIX
+  name: Wix.com Ltd. Ordinary Shares
+- symbol: EGO
+  name: Eldorado Gold Corporation
+- symbol: NVTS
+  name: Navitas Semiconductor Corporation Common Stock
+- symbol: RRC
+  name: Range Resources Corp
+- symbol: NLY
+  name: Annaly Capital Management. Inc.
+- symbol: DAVE
+  name: Dave Inc. Class A Common Stock
+- symbol: TOL
+  name: Toll Brothers, Inc.
+- symbol: ARWR
+  name: Arrowhead Pharmaceuticals, Inc. Common Stock
+- symbol: SNY
+  name: Sanofi ADS
+- symbol: KIM
+  name: Kimco Realty Corp.
+- symbol: AMG
+  name: Affiliated Managers Group
+- symbol: POWL
+  name: Powell Industries, Inc. Common Stock
+- symbol: VLY
+  name: Valley National Bancorp Common Stock
+- symbol: PL
+  name: Planet Labs PBC
+- symbol: BIO
+  name: Bio-Rad Laboratories, Inc.Class A
+- symbol: ACI
+  name: Albertsons Companies, Inc.
+- symbol: FRSH
+  name: Freshworks Inc. Class A Common Stock
+- symbol: CZR
+  name: Caesars Entertainment, Inc. Common Stock
+- symbol: FORM
+  name: FormFactor, Inc. FormFactor, Inc. Common Stock
+- symbol: ENPH
+  name: Enphase Energy, Inc. Common Stock
+- symbol: AVAV
+  name: AeroVironment, Inc. Common Stock
+- symbol: PSKY
+  name: Paramount Skydance Corporation Class B Common Stock
+- symbol: PLNT
+  name: Planet Fitness, Inc.
+- symbol: MFC
+  name: Manulife Financial Corp.
+- symbol: VSAT
+  name: ViaSat, Inc. Common Stock
+- symbol: RPM
+  name: RPM International, Inc.
+- symbol: CHRD
+  name: Chord Energy Corporation Common Stock
+- symbol: CCK
+  name: Crown Holdings Inc.
+- symbol: BAM
+  name: Brookfield Asset Management Ltd.
+- symbol: SOUN
+  name: SoundHound AI, Inc Class A Common Stock
+- symbol: ARW
+  name: Arrow Electronics, Inc.
+- symbol: SPXC
+  name: SPX Technologies, Inc.
+- symbol: GGG
+  name: Graco Inc
+- symbol: CHDN
+  name: Churchill Downs, Incorporated Common Stock
+- symbol: CNM
+  name: Core & Main, Inc.
+- symbol: BILL
+  name: BILL Holdings, Inc.
+- symbol: MYRG
+  name: MYR Group, Inc. Common Stock
+- symbol: PCTY
+  name: Paylocity Holding Corporation Common Stock
+- symbol: MKL
+  name: Markel Group Inc.
+- symbol: TTEK
+  name: Tetra Tech, Inc. Common Stock
+- symbol: PNFP
+  name: Pinnacle Financial Partners, Inc.
+- symbol: KLAR
+  name: Klarna Group plc
+- symbol: HLI
+  name: Houlihan Lokey, Inc.
+- symbol: RELX
+  name: RELX PLC
+- symbol: WMS
+  name: ADVANCED DRAINAGE SYSTEMS, INC.
+- symbol: CFR
+  name: Cullen/Frost Bankers Inc.
+- symbol: BOX
+  name: BOX, INC.
+- symbol: SNA
+  name: Snap-on Incorporated
+- symbol: HNGE
+  name: Hinge Health, Inc.
+- symbol: UNM
+  name: Unum Group
+- symbol: WTRG
+  name: Essential Utilities, Inc.
+- symbol: MBGL
+  name: Mobility Global Inc.
+- symbol: ALK
+  name: Alaska Air Group, Inc.
+- symbol: MGA
+  name: Magna International
+- symbol: KGS
+  name: Kodiak Gas Services, Inc.
+- symbol: KRYS
+  name: Krystal Biotech, Inc. Common Stock
+- symbol: TAP
+  name: Molson Coors Beverage Company Class B
+- symbol: MT
+  name: ArcelorMittal
+- symbol: AIT
+  name: Applied Industrial Technologies, Inc.
+- symbol: PRMB
+  name: Primo Brands Corporation
+- symbol: FER
+  name: Ferrovial N.V. Ordinary Shares
+- symbol: COO
+  name: The Cooper Companies, Inc. Common Stock
+- symbol: SHAK
+  name: Shake Shack Inc.
+- symbol: HMY
+  name: Harmony Gold Mining Company Limited
+- symbol: BULL
+  name: Webull Corporation Class A Ordinary Shares
+- symbol: QRVO
+  name: Qorvo, Inc. Common Stock
+- symbol: GMED
+  name: GLOBUS MEDICAL INC
+- symbol: EG
+  name: Everest Group, Ltd.
+- symbol: JEF
+  name: Jefferies Financial Group Inc.
+- symbol: LAMR
+  name: Lamar Advertising Company Class A Common Stock
+- symbol: TS
+  name: Tenaris S. A.
+- symbol: MGM
+  name: MGM RESORTS INTERNATIONAL
+- symbol: XP
+  name: XP Inc. Class A Common Stock
+- symbol: ALSN
+  name: ALLISON TRANSMISSION HOLDINGS, INC.
+- symbol: ALM
+  name: Almonty Industries Inc. Common Shares
+- symbol: MTN
+  name: Vail Resorts, Inc.
+- symbol: EHC
+  name: Encompass Health Corporation Common Stock
+- symbol: CENX
+  name: Century Aluminum Company Common Stock
+- symbol: PRIM
+  name: Primoris Services Corporation
+- symbol: BMO
+  name: Bank of Montreal
+- symbol: PNW
+  name: Pinnacle West Capital Corporation
+- symbol: EXEL
+  name: Exelixis, Inc. Common Stock
+- symbol: RNG
+  name: RINGCENTRAL, INC.
+- symbol: CR
+  name: Crane Company
+- symbol: FCEL
+  name: FuelCell Energy, Inc. Common Stock
+- symbol: APG
+  name: APi Group Corporation
+- symbol: HSIC
+  name: Henry Schein, Inc. Common Stock
+- symbol: RNR
+  name: RenaissanceRe Holdings Ltd.
+- symbol: GME
+  name: GameStop Corp. Class A
+- symbol: REXR
+  name: REXFORD INDUSTRIAL REALTY, INC.
+- symbol: NDSN
+  name: Nordson Corporation Common Stock
+- symbol: IESC
+  name: IES Holdings, Inc. Common Stock
+- symbol: ATAI
+  name: AtaiBeckley Inc. Common Stock
+- symbol: DEO
+  name: Diageo plc
+- symbol: RH
+  name: RH
+- symbol: MTDR
+  name: MATADOR RESOURCES COMPANY
+- symbol: LSTR
+  name: Landstar System, Inc. Common Stock
+- symbol: WH
+  name: Wyndham Hotels & Resorts, Inc. Common Stock
+- symbol: SPHR
+  name: Sphere Entertainment Co.
+- symbol: GL
+  name: Globe Life Inc.
+- symbol: SOLV
+  name: Solventum Corporation
+- symbol: HSBC
+  name: HSBC Holdings PLC
+- symbol: TFX
+  name: Teleflex Incorporated
+- symbol: FSLY
+  name: Fastly, Inc. Class A Common Stock
+- symbol: AEO
+  name: American Eagle Outfitters
+- symbol: URBN
+  name: Urban Outfitters, Inc. Common Stock
+- symbol: HRB
+  name: H&R Block, Inc.
+- symbol: LQDA
+  name: Liquidia Corporation Common Stock
+- symbol: AN
+  name: AutoNation, Inc.
+- symbol: APPF
+  name: AppFolio, Inc. Class A Common Stock
+- symbol: LBRT
+  name: Liberty Energy Inc.
+- symbol: GIL
+  name: Gildan Activewear Inc.
+- symbol: HXL
+  name: Hexcel Corporation
+- symbol: CUBE
+  name: CubeSmart
+- symbol: CHEF
+  name: The Chefs' Warehouse, Inc. Common Stock
+- symbol: MAA
+  name: Mid-America Apartment Communities, Inc.
+- symbol: SHAZ
+  name: SharonAI Holdings, Inc. Class A Common Stock
+- symbol: POST
+  name: POST HOLDINGS, INC.
+- symbol: NVST
+  name: Envista Holdings Corporation Common stock, $0.01 par value per share
+- symbol: VOYA
+  name: VOYA FINANCIAL, INC.
+- symbol: EXLS
+  name: ExlService Holdings, Inc. Common Stock
+- symbol: TPL
+  name: Texas Pacific Land Corporation
+- symbol: ATO
+  name: Atmos Energy Corporation
+- symbol: CTRE
+  name: CareTrust REIT, Inc
+- symbol: WLK
+  name: Westlake Corporation
+- symbol: RHP
+  name: Ryman Hospitality Properties, Inc
+- symbol: J
+  name: Jacobs Solutions Inc.
+- symbol: LUNR
+  name: Intuitive Machines, Inc. Class A Common Stock
+- symbol: AYI
+  name: Acuity Inc.
+- symbol: CRUS
+  name: Cirrus Logic, Inc. Common Stock
+- symbol: LW
+  name: Lamb Weston Holdings, Inc.
+- symbol: IOVA
+  name: Iovance Biotherapeutics, Inc. Common Stock
+- symbol: RGA
+  name: Reinsurance Group of America, Incorporated
+- symbol: LKQ
+  name: LKQ Corporation Common Stock
+- symbol: CORT
+  name: Corcept Therapeutics Incorporated Common Stock
+- symbol: TREX
+  name: Trex Company, Inc.
+- symbol: AMBA
+  name: Ambarella, Inc. Ordinary Shares
+- symbol: ES
+  name: Eversource Energy
+- symbol: NOV
+  name: NOV Inc.
+- symbol: AES
+  name: AES Corporation
+- symbol: BCS
+  name: Barclays PLC
+- symbol: AMH
+  name: AMERICAN HOMES 4 RENT
+- symbol: SSRM
+  name: SSR Mining Inc. Common Stock
+- symbol: WTFC
+  name: Wintrust Financial Corporation Common Stock
+- symbol: RAL
+  name: Ralliant Corporation
+- symbol: MUFG
+  name: Mitsubishi UFJ Financial Group, Inc.
+- symbol: SEDG
+  name: SolarEdge Technologies, Inc. Common Stock
+- symbol: WU
+  name: The Western Union Company
+- symbol: AAP
+  name: ADVANCE AUTO PARTS INC
+- symbol: BIRK
+  name: Birkenstock Holding plc
+- symbol: TU
+  name: Telus Corporation
+- symbol: NEU
+  name: NewMarket Corporation
+- symbol: TGTX
+  name: TG Therapeutics, Inc. Common Stock
+- symbol: SBS
+  name: COMPANHIA DE SANEAMENTO B SICO DO ESTADO DE SAO PAULO-SABESP ADS'S
+- symbol: FCFS
+  name: FirstCash Holdings, Inc. Common Stock
+- symbol: MSGS
+  name: Madison Square Garden Sports Corp.
+- symbol: FHB
+  name: First Hawaiian, Inc. Common Stock
+- symbol: SYRE
+  name: Spyre Therapeutics, Inc. Common Stock
+- symbol: CNK
+  name: Cinemark Holdings, Inc.
+- symbol: EGP
+  name: EastGroup Properties Inc.
+- symbol: LEA
+  name: Lear Corporation
+- symbol: GMAB
+  name: Genmab A/S ADS
+- symbol: KNSL
+  name: Kinsale Capital Group, Inc.
+- symbol: GFL
+  name: GFL Environmental Inc. Subordinate Voting Shares
+- symbol: FRPT
+  name: Freshpet, Inc. Common Stock
+- symbol: ENS
+  name: EnerSys, Inc.
+- symbol: MORN
+  name: Morningstar, Inc. Common Stock
+- symbol: BSP
+  name: Bending Spoons S.p.A. Ordinary Shares
+- symbol: NTSK
+  name: Netskope, Inc. Class A Common Stock
+- symbol: LGN
+  name: Legence Corp. Class A Common stock
+- symbol: ALGM
+  name: Allegro MicroSystems, Inc. Common Stock
+- symbol: ALHC
+  name: Alignment Healthcare, Inc. Common Stock
+- symbol: KSS
+  name: Kohls Corporation
+- symbol: ROAD
+  name: Construction Partners, Inc. Class A Common Stock
+- symbol: VSEC
+  name: VSE Corporation Common Stock
+- symbol: MAIR
+  name: Madison Air Solutions Corporation
+- symbol: ACA
+  name: Arcosa, Inc. Common Stock
+- symbol: CELC
+  name: Celcuity Inc. Common Stock
+- symbol: CE
+  name: Celanese Corporation Common Stock
+- symbol: AVT
+  name: Avnet, Inc. Common Stock
+- symbol: AWI
+  name: Armstrong World Industries, Inc.
+- symbol: IMAX
+  name: Imax Corp
+- symbol: QS
+  name: QuantumScape Corporation Class A Common Stock
+- symbol: GVA
+  name: Granite Construction Inc.
+- symbol: AUGO
+  name: Aura Minerals Inc. Common Shares
+- symbol: SITE
+  name: SiteOne Landscape Supply, Inc.
+- symbol: BALL
+  name: Ball Corporation
+- symbol: ELS
+  name: Equity Lifestyle Properties, Inc.
+- symbol: UMBF
+  name: UMB Financial Corporation Common Stock
+- symbol: LNC
+  name: Lincoln National Corp.
+- symbol: SSB
+  name: SouthState Bank Corporation
+- symbol: PEGA
+  name: Pegasystems Inc. Common Stock
+- symbol: ORKA
+  name: Oruka Therapeutics, Inc. Common Stock
+- symbol: MMSI
+  name: Merit Medical Systems, Inc. Common Stock
+- symbol: FLNC
+  name: Fluence Energy, Inc. Class A Common Stock
+- symbol: YETI
+  name: YETI Holdings, Inc. Common Stock
+- symbol: IRTC
+  name: iRhythm Holdings, Inc. Common Stock
+- symbol: SCI
+  name: Service Corporation International
+- symbol: TEX
+  name: Terex Corporation
+- symbol: MANE
+  name: Veradermics, Incorporated
+- symbol: AOS
+  name: A.O. Smith Corporation
+- symbol: BKD
+  name: Brookdale Senior Living, Inc.
+- symbol: VNOM
+  name: Viper Energy, Inc. Class A Common Stock
+- symbol: RELY
+  name: Remitly Global, Inc. Common Stock
+- symbol: SBET
+  name: SharpLink, Inc. Common Stock
+- symbol: INDV
+  name: Indivior Pharmaceuticals, Inc. Common Stock
+- symbol: CM
+  name: Canadian Imperial Bank of Commerce
+- symbol: INFQ
+  name: Infleqtion, Inc.
+- symbol: CVLT
+  name: Commvault Systems, Inc. Common Stock
+- symbol: ALKS
+  name: Alkermes plc Ordinary Shares
+- symbol: SF
+  name: Stifel Financial Corp.
+- symbol: BCE
+  name: BCE, Inc.
+- symbol: ARE
+  name: Alexandria Real Estate Equities, Inc.
+- symbol: BANC
+  name: Banc of California, Inc.
+- symbol: BB
+  name: BlackBerry Limited
+- symbol: AIZ
+  name: Assurant, Inc.
+- symbol: RHI
+  name: Robert Half Inc.
+- symbol: ATKR
+  name: Atkore Inc.
+- symbol: PEN
+  name: Penumbra, Inc.
+- symbol: VMI
+  name: Valmont Industries, Inc.
+- symbol: DNTH
+  name: Dianthus Therapeutics, Inc. Common Stock
+- symbol: ARCC
+  name: Ares Capital Corporation Common Stock
+- symbol: CCC
+  name: CCC Intelligent Solutions Holdings Inc. Common Stock
+- symbol: HQY
+  name: HealthEquity, Inc. Common Stock
+- symbol: ORA
+  name: Ormat Technologies, Inc.
+- symbol: EBC
+  name: Eastern Bankshares, Inc. Common Stock
+- symbol: RUN
+  name: Sunrun Inc. Common Stock
+- symbol: REG
+  name: Regency Centers Corporation Common Stock
+- symbol: RYTM
+  name: Rhythm Pharmaceuticals, Inc. Common Stock
+- symbol: TVTX
+  name: Travere Therapeutics, Inc. Common Stock
+- symbol: MAC
+  name: The Macerich Company
+- symbol: SAIL
+  name: SailPoint, Inc. Common Stock
+- symbol: TDC
+  name: TERADATA CORPORATION
+- symbol: ECG
+  name: Everus Construction Group, Inc.
+- symbol: RYAN
+  name: Ryan Specialty Holdings, Inc.
+- symbol: FNB
+  name: F.N.B. Corp
+- symbol: HRI
+  name: Herc Holdings Inc.
+- symbol: WSC
+  name: WillScot Holdings Corporation Class A Common Stock
+- symbol: DK
+  name: Delek US Holdings, Inc.
+- symbol: LGND
+  name: Ligand Pharmaceuticals Incorporated Common Stock
+- symbol: BLLN
+  name: BillionToOne, Inc. Class A Common Stock
+- symbol: EWBC
+  name: East West Bancorp, Inc. Common Stock
+- symbol: BXP
+  name: BXP, Inc.
+- symbol: MIDD
+  name: Middleby Corporation (The) Common Stock
+- symbol: HAE
+  name: Haemonetics Corporation
+- symbol: ASST
+  name: Strive, Inc. Class A Common Stock
+- symbol: FRVO
+  name: Fervo Energy Company Class A common stock
+- symbol: WRB
+  name: W.R. Berkley Corporation
+- symbol: VVV
+  name: Valvoline Inc.
+- symbol: AMLX
+  name: Amylyx Pharmaceuticals, Inc. Common Stock
+- symbol: R
+  name: Ryder System, Inc.
+- symbol: XE
+  name: X-Energy, Inc. Class A Common Stock
+- symbol: LIVN
+  name: LivaNova PLC Ordinary Shares
+- symbol: G
+  name: GENPACT LIMITED
+- symbol: PSN
+  name: Parsons Corporation
+- symbol: CRGY
+  name: Crescent Energy Company
+- symbol: MSM
+  name: MSC Industrial Direct Co., Inc. Class A
+- symbol: LPX
+  name: Louisiana-Pacific Corp.
+- symbol: ITRI
+  name: Itron, Inc. Common Stock
+- symbol: CINF
+  name: Cincinnati Financial Corporation Common Stock
+- symbol: EXK
+  name: Endeavour Silver Corp.
+- symbol: GNTX
+  name: Gentex Corporation Common Stock
+- symbol: MTRN
+  name: Materion Corporation
+- symbol: VRNS
+  name: Varonis Systems, Inc. Common Stock
+- symbol: WHR
+  name: Whirlpool Corp.
+- symbol: ADT
+  name: ADT Inc.
+- symbol: ADC
+  name: Agree Realty Corporation
+- symbol: RSI
+  name: Rush Street Interactive, Inc.
+- symbol: KYMR
+  name: Kymera Therapeutics, Inc. Common Stock
+- symbol: NOG
+  name: Northern Oil and Gas, Inc.
+- symbol: PENG
+  name: Penguin Solutions, Inc. Common Stock
+- symbol: KD
+  name: Kyndryl Holdings, Inc.
+- symbol: NXST
+  name: Nexstar Media Group, Inc. Common Stock
+- symbol: PJT
+  name: PJT Partners Inc.
+- symbol: UGI
+  name: UGI Corporation
+- symbol: RYN
+  name: Rayonier Inc.
+- symbol: HCC
+  name: Warrior Met Coal, Inc.
+- symbol: UPST
+  name: Upstart Holdings, Inc. Common stock
+- symbol: FNF
+  name: Fidelity National Financial, Inc.
+- symbol: DB
+  name: Deutsche Bank Aktiengesellschaft
+- symbol: THG
+  name: The Hanover Insurance Group, Inc.
+- symbol: PARR
+  name: Par Pacific Holdings, Inc. Common Stock
+- symbol: ASB
+  name: Associated Banc-Corp
+- symbol: WAL
+  name: Western Alliance Bancorporation
+- symbol: AXS
+  name: Axis Capital Holders Limited
+- symbol: STAG
+  name: STAG INDUSTRIAL, INC.
+- symbol: XRAY
+  name: DENTSPLY SIRONA Inc. Common Stock
+- symbol: LUMN
+  name: Lumen Technologies, Inc.
+- symbol: TAL
+  name: TAL Education Group
+- symbol: FOUR
+  name: Shift4 Payments, Inc.
+- symbol: SEIC
+  name: SEI Investments Company Common Stock
+- symbol: MIRM
+  name: Mirum Pharmaceuticals, Inc. Common Stock
+- symbol: MPLX
+  name: MPLX LP
+- symbol: CBZ
+  name: CBIZ, Inc.
+- symbol: WTS
+  name: Watts Water Technologies, Inc. Class A
+- symbol: ASO
+  name: Academy Sports and Outdoors, Inc. Common Stock
+- symbol: BRX
+  name: BRIXMOR PROPERTY GROUP INC.
+- symbol: DFTX
+  name: Definium Therapeutics, Inc. Common Shares
+- symbol: PK
+  name: Park Hotels & Resorts Inc. Common Stock
+- symbol: IBP
+  name: INSTALLED BUILDING PRODUCTS, INC.
+- symbol: PVH
+  name: PVH Corp.
+- symbol: FLG
+  name: Flagstar Bank, National Association
+- symbol: PTCT
+  name: PTC Therapeutics, Inc. Common Stock
+- symbol: ST
+  name: Sensata Technologies Holding plc
+- symbol: OGE
+  name: OGE Energy Corp.
+- symbol: SYNA
+  name: Synaptics Incorporated Common Stock $0.001 Par Value
+- symbol: FRO
+  name: Frontline Plc
+- symbol: GTX
+  name: Garrett Motion Inc. Common Stock
+- symbol: CMC
+  name: Commercial Metals Company
+- symbol: JBTM
+  name: JBT Marel Corporation
+- symbol: KEX
+  name: Kirby Corporation
+- symbol: SMMT
+  name: Summit Therapeutics Inc. Common Stock
+- symbol: CAMT
+  name: Camtek Ltd. Ordinary Shares
+- symbol: SBRA
+  name: Sabra Health Care REIT, Inc. Common Stock
+- symbol: GLOB
+  name: GLOBANT S.A.
+- symbol: CALM
+  name: Cal-Maine Foods, Inc. Common Stock
+- symbol: MAT
+  name: Mattel, Inc. Common Stock
+- symbol: EMN
+  name: Eastman Chemical Company
+- symbol: ENVA
+  name: Enova International, Inc.
+- symbol: KLIC
+  name: Kulicke and Soffa Industries, Inc. Common Stock
+- symbol: ESAB
+  name: ESAB Corporation
+- symbol: PI
+  name: Impinj, Inc. Common Stock
+- symbol: UTZ
+  name: Utz Brands, Inc.
+- symbol: CHH
+  name: Choice Hotels Intnl.
+- symbol: MRCY
+  name: Mercury Systems Inc Common Stock
+- symbol: COGT
+  name: Cogent Biosciences, Inc. Common Stock
+- symbol: OHI
+  name: Omega Healthcare Investors Inc.
+- symbol: GLBE
+  name: Global-E Online Ltd. Ordinary Shares
+- symbol: KSPI
+  name: Joint Stock Company Kaspi.kz American Depository Shares
+- symbol: NXE
+  name: NexGen Energy Ltd.
+- symbol: FMX
+  name: FOMENTO ECONOMICO MEXICANO, S.A.B. DE C.V.
+- symbol: FIVN
+  name: Five9, Inc. Common Stock
+- symbol: BRZE
+  name: Braze, Inc. Class A Common Stock
+- symbol: COKE
+  name: Coca-Cola Consolidated, Inc. Common Stock
+- symbol: BYD
+  name: Boyd Gaming Corporation
+- symbol: VIRT
+  name: Virtu Financial, Inc. Class A
+- symbol: BEPC
+  name: Brookfield Renewable Corporation Class A Exchangeable Subordinate Voting Shares
+- symbol: IDCC
+  name: InterDigital, Inc. Common Stock
+- symbol: ERAS
+  name: Erasca, Inc. Common Stock
+- symbol: BFAM
+  name: BRIGHT HORIZONS FAMILY SOLUTIONS INC.
+- symbol: SLM
+  name: SLM Corporation Common Stock
+- symbol: DDS
+  name: Dillards Inc.
+- symbol: ABCL
+  name: AbCellera Biologics Inc. Common Shares
+- symbol: VCTR
+  name: Victory Capital Holdings, Inc. Class A Common Stock
+- symbol: HTFL
+  name: Heartflow, Inc. Common Stock
+- symbol: ATR
+  name: AptarGroup, Inc.
+- symbol: BMI
+  name: Badger Meter, Inc.
+- symbol: CHE
+  name: Chemed Corporation
+- symbol: LAZ
+  name: Lazard, Inc.
+- symbol: MLI
+  name: Mueller Industries, Inc.
+- symbol: PLXS
+  name: Plexus Corp. Common Stock
+- symbol: MTH
+  name: Meritage Homes Corporation
+- symbol: WOLF
+  name: Wolfspeed, Inc.
+- symbol: TDW
+  name: Tidewater, Inc.
+- symbol: JMKE
+  name: Jersey Mike's Subs Inc.
+- symbol: CPRI
+  name: Capri Holdings Limited
+- symbol: WRBY
+  name: Warby Parker Inc.
+- symbol: LEU
+  name: Centrus Energy Corp.
+- symbol: HLNE
+  name: Hamilton Lane Incorporated Class A Common Stock
+- symbol: VAC
+  name: MARRIOTT VACATIONS WORLDWIDE CORPORATION
+- symbol: ARX
+  name: Accelerant Holdings
+- symbol: LFST
+  name: LifeStance Health Group, Inc. Common Stock
+- symbol: OLED
+  name: Universal Display Corporation Common Stock
+- symbol: ABG
+  name: Asbury Automotive Group, Inc.
+- symbol: OTEX
+  name: Open Text Corporation Common Shares
+- symbol: ADPT
+  name: Adaptive Biotechnologies Corporation Common Stock
+- symbol: PTGX
+  name: Protagonist Therapeutics, Inc. Common Stock
+- symbol: SHC
+  name: Sotera Health Company Common Stock
+- symbol: AMR
+  name: Alpha Metallurgical Resources, Inc.
+- symbol: MGNI
+  name: Magnite, Inc. Common Stock
+- symbol: NE
+  name: Noble Corporation plc
+- symbol: ALV
+  name: Autoliv, Inc.
+- symbol: SQM
+  name: Sociedad Quimica y Minera de Chile SA
+- symbol: SEZL
+  name: Sezzle Inc. Common Stock
+- symbol: OZK
+  name: Bank OZK Common Stock
+- symbol: CACC
+  name: Credit Acceptance Corporation Common Stock
+- symbol: VAL
+  name: Valaris Limited
+- symbol: YOU
+  name: Clear Secure, Inc.
+- symbol: SRRK
+  name: Scholar Rock Holding Corporation Common Stock
+- symbol: NOVT
+  name: Novanta Inc. Common Stock
+- symbol: ULS
+  name: UL Solutions Inc.
+- symbol: AI
+  name: C3.ai, Inc.
+- symbol: ASAN
+  name: Asana, Inc. Class A Common Stock
+- symbol: FCN
+  name: FTI Consulting, Inc.
+- symbol: COCO
+  name: The Vita Coco Company, Inc. Common Stock
+- symbol: CLBK
+  name: Columbia Financial, Inc. Common Stock
+- symbol: BC
+  name: Brunswick Corporation
+- symbol: MATX
+  name: Matsons, Inc.
+- symbol: NAVN
+  name: Navan, Inc. Class A Common Stock
+- symbol: VSNT
+  name: Versant Media Group, Inc. Class A Common Stock
+- symbol: BPOP
+  name: Popular, Inc. Common Stock
+- symbol: ACMR
+  name: ACM Research, Inc. Class A Common Stock
+- symbol: GSAT
+  name: Globalstar, Inc. Common Stock
+- symbol: DIOD
+  name: Diodes Incorporated Common Stock
+- symbol: TTC
+  name: Toro Company (The)
+- symbol: GDS
+  name: GDS Holdings Limited ADS
+- symbol: LRN
+  name: Stride, Inc.
+- symbol: KNF
+  name: Knife River Corporation
+- symbol: GLNG
+  name: Golar Lng Ltd
+- symbol: CECO
+  name: CECO Environmental Corp. Common Stock
+- symbol: SXT
+  name: Sensient Technology Corporation
+- symbol: MWH
+  name: SOLV Energy, Inc. Class A Common Stock
+- symbol: KNTK
+  name: Kinetik Holdings Inc.
+- symbol: REZI
+  name: Resideo Technologies, Inc. Common Stock
+- symbol: ICUI
+  name: ICU Medical, Inc. Common Stock
+- symbol: ENSG
+  name: The Ensign Group, Inc. Common Stock
+- symbol: SIG
+  name: Signet Jewelers Limited
+- symbol: PII
+  name: Polaris Inc.
+- symbol: SKY
+  name: Champion Homes, Inc.
+- symbol: NCNO
+  name: nCino, Inc. Common Stock
+- symbol: HUBG
+  name: Hub Group, Inc. Class A Common Stock
+- symbol: DOX
+  name: Amdocs Limited Ordinary Shares
+- symbol: WEN
+  name: Wendy's Company (The) Common Stock
+- symbol: GTES
+  name: Gates Industrial Corporation Ltd.
+- symbol: EQPT
+  name: EquipmentShare.com Inc Class A Common Stock
+- symbol: GXO
+  name: GXO Logistics, Inc.
+- symbol: SLAB
+  name: Silicon Laboratories, Inc. Common Stock
+- symbol: GPK
+  name: Graphic Packaging Holding Company
+- symbol: UAA
+  name: Under Armour, Inc.
+- symbol: STEP
+  name: StepStone Group Inc. Class A Common Stock
+- symbol: PUMP
+  name: ProPetro Holding Corp.
+- symbol: VIST
+  name: Vista Energy S.A.B. de C.V.
+- symbol: SNN
+  name: Smith & Nephew plc
+- symbol: PENN
+  name: PENN Entertainment, Inc. Common Stock
+- symbol: WAY
+  name: Waystar Holding Corp. Common Stock
+- symbol: SAIC
+  name: Science Applications International Corporation Common Stock
+- symbol: LASR
+  name: nLIGHT, Inc. Common Stock
+- symbol: DX
+  name: Dynex Capital, Inc.
+- symbol: WPC
+  name: W.P. Carey Inc. (REIT)
+- symbol: BFH
+  name: Bread Financial Holdings, Inc.
+- symbol: TPC
+  name: Tutor Perini Corporation
+- symbol: HOG
+  name: Harley-Davidson, Inc.
+- symbol: GENI
+  name: Genius Sports Limited
+- symbol: OLN
+  name: Olin Corp.
+- symbol: KTB
+  name: Kontoor Brands, Inc. Common Stock
+- symbol: ACHC
+  name: Acadia Healthcare Company, Inc. Common Stock
+- symbol: WMG
+  name: Warner Music Group Corp. Class A Common Stock
+- symbol: LYG
+  name: Lloyds Banking Group PLC
+- symbol: DCI
+  name: Donaldson Company, Inc.
+- symbol: TMDX
+  name: TransMedics Group, Inc. Common Stock
+- symbol: YUMC
+  name: Yum China Holdings, Inc. Common Stock
+- symbol: LOPE
+  name: Grand Canyon Education, Inc. Common Stock
+- symbol: VCYT
+  name: Veracyte, Inc. Common Stock
+- symbol: TARS
+  name: Tarsus Pharmaceuticals, Inc. Common Stock
+- symbol: WKC
+  name: World Kinect Corporation
+- symbol: LOAR
+  name: Loar Holdings Inc.
+- symbol: DHT
+  name: DHT HOLDINGS, INC.
+- symbol: PCVX
+  name: Vaxcyte, Inc. Common Stock
+- symbol: JAN
+  name: Janus Living, Inc.
+- symbol: PTON
+  name: Peloton Interactive, Inc. Class A Common Stock
+- symbol: MBLY
+  name: Mobileye Global Inc. Class A Common Stock
+- symbol: DYN
+  name: Dyne Therapeutics, Inc. Common Stock
+- symbol: MC
+  name: MOELIS & COMPANY
+- symbol: OSIS
+  name: OSI Systems, Inc. Common Stock (DE)
+- symbol: RARE
+  name: Ultragenyx Pharmaceutical Inc. Common Stock
+- symbol: SNEX
+  name: StoneX Group Inc. Common Stock
+- symbol: NESR
+  name: National Energy Services Reunited Corp Ordinary Shares
+- symbol: QURE
+  name: uniQure N.V. Ordinary Shares
+- symbol: SLGN
+  name: Silgan Holdings Inc
+- symbol: FTDR
+  name: frontdoor, inc. Common Stock
+- symbol: AMPX
+  name: Amprius Technologies, Inc.
+- symbol: OMF
+  name: OneMain Holdings, Inc.
+- symbol: GBCI
+  name: Glacier Bancorp Inc
+- symbol: AROC
+  name: Archrock Inc
+- symbol: BHF
+  name: Brighthouse Financial, Inc. Common Stock
+- symbol: PB
+  name: Prosperity Bancshares Inc
+- symbol: MIR
+  name: Mirion Technologies, Inc.
+- symbol: GPI
+  name: Group 1 Automotive, Inc.
+- symbol: SMG
+  name: The Scotts Miracle-Gro Company
+- symbol: SON
+  name: Sonoco Products Company
+- symbol: ESE
+  name: ESCO Technologies, Inc.
+- symbol: JXN
+  name: Jackson Financial Inc.
+- symbol: STNE
+  name: StoneCo Ltd. Class A Common Shares
+- symbol: QNT
+  name: Quantinuum Inc. Class A Common Stock
+- symbol: CRSP
+  name: CRISPR Therapeutics AG Common Shares
+- symbol: NWL
+  name: Newell Brands Inc. Common Stock
+- symbol: BNL
+  name: Broadstone Net Lease, Inc.
+- symbol: MUR
+  name: Murphy Oil Corp.
+- symbol: DV
+  name: DoubleVerify Holdings, Inc.
+- symbol: CLMT
+  name: Calumet, Inc. Common Stock
+- symbol: DBRG
+  name: DigitalBridge Group, Inc.
+- symbol: MSA
+  name: Mine Safety Incorporated
+- symbol: OUST
+  name: Ouster, Inc. Common Stock
+- symbol: POET
+  name: POET Technologies Inc. Common Shares
+- symbol: UI
+  name: Ubiquiti Inc. Common Stock
+- symbol: SYM
+  name: Symbotic Inc. Class A Common Stock
+- symbol: ERIE
+  name: Erie Indemnity Company Class A Common Stock
+- symbol: CBSH
+  name: Commerce Bancshares, Inc. Common Stock
+- symbol: HOMB
+  name: Home BancShares, Inc.
+- symbol: AXGN
+  name: Axogen, Inc. Common Stock
+- symbol: NNN
+  name: NNN REIT, Inc.
+- symbol: FAF
+  name: First American Financial Corporation
+- symbol: LMND
+  name: Lemonade, Inc.
+- symbol: CWST
+  name: Casella Waste Systems, Inc. Class A Common Stock
+- symbol: IBRX
+  name: ImmunityBio, Inc. Common Stock
+- symbol: QTWO
+  name: Q2 Holdings Inc
+- symbol: IDA
+  name: IDACORP, Inc.
+- symbol: AIR
+  name: AAR Corp.
+- symbol: MIAX
+  name: Miami International Holdings, Inc.
+- symbol: STUB
+  name: StubHub Holdings, Inc.
+- symbol: GT
+  name: The Goodyear Tire & Rubber Company Common Stock
+- symbol: OPCH
+  name: Option Care Health, Inc. Common Stock
+- symbol: BTU
+  name: Peabody Energy Corporation
+- symbol: IPGP
+  name: IPG Photonics Corporation Common Stock
+- symbol: AXTA
+  name: Axalta Coating Systems Ltd.
+- symbol: PRI
+  name: PRIMERICA, INC.
+- symbol: SSD
+  name: Simpson Manufacturing Co., Inc.
+- symbol: VIPS
+  name: Vipshop Holdings Limited
+- symbol: ARR
+  name: ARMOUR Residential REIT, Inc.
+- symbol: HP
+  name: Helmerich & Payne, Inc.
+- symbol: WERN
+  name: Werner Enterprises, Inc. Common Stock
+- symbol: AM
+  name: Antero Midstream Corporation Common Stock
+- symbol: XMTR
+  name: Xometry, Inc. Class A Common Stock
+- symbol: TNL
+  name: Travel + Leisure Co.
+- symbol: FULT
+  name: Fulton Financial Corporation Common Stock
+- symbol: OUT
+  name: OUTFRONT Media Inc.
+- symbol: DLB
+  name: Dolby Laboratories, Inc.Class A
+- symbol: NGG
+  name: National Grid PLC
+- symbol: WHD
+  name: Cactus, Inc.
+- symbol: CDNA
+  name: CareDx, Inc. Common Stock
+- symbol: BDC
+  name: Belden Inc.
+- symbol: PSNL
+  name: Personalis, Inc. Common Stock
+- symbol: KBR
+  name: KBR, Inc.
+- symbol: OPLN
+  name: OPENLANE, Inc
+- symbol: DPC
+  name: DPC Holdings PLC
+- symbol: RCAT
+  name: Red Cat Holdings, Inc. Common Stock
+- symbol: NPO
+  name: Enpro Inc.
+- symbol: VKTX
+  name: Viking Therapeutics, Inc. Common Stock
+- symbol: MAN
+  name: ManpowerGroup
+- symbol: BELFB
+  name: Bel Fuse Inc. Class B Common Stock
+- symbol: VNT
+  name: Vontier Corporation
+- symbol: BSBR
+  name: BANCO SANTANDER (BRASIL) SA
+- symbol: SLG
+  name: SL Green Realty Corp.
+- symbol: PAY
+  name: Paymentus Holdings, Inc.
+- symbol: CVCO
+  name: Cavco Industries, Inc. Common Stock When Issued
+- symbol: BKH
+  name: Black Hills Corporation
+- symbol: ACLS
+  name: Axcelis Technologies, Inc. Common Stock
+- symbol: REPL
+  name: Replimune Group, Inc. Common Stock
+- symbol: BCO
+  name: The Brink's Company
+- symbol: PAC
+  name: Grupo Aeroportuario del Pacifico, S.A.B. de C.V. Amer. Dep. Shares (each rep.
+    10 Ser. B shares)
+- symbol: ARCB
+  name: ArcBest Corporation Common Stock
+- symbol: INGR
+  name: Ingredion Incorporated
+- symbol: RRR
+  name: Red Rock Resorts, Inc. Class A Common Stock
+- symbol: SLS
+  name: SELLAS Life Sciences Group, Inc. Common Stock
+- symbol: PIPR
+  name: Piper Sandler Companies
+- symbol: KMT
+  name: Kennametal Inc.
+- symbol: VERA
+  name: Vera Therapeutics, Inc. Class A Common Stock
+- symbol: DNOW
+  name: DNOW Inc.
+- symbol: KNSA
+  name: Kiniksa Pharmaceuticals International, plc Class A Ordinary Shares
+- symbol: LEVI
+  name: Levi Strauss & Co. Class A Common Stock
+- symbol: RLAY
+  name: Relay Therapeutics, Inc. Common Stock
+- symbol: EWTX
+  name: Edgewise Therapeutics, Inc. Common Stock
+- symbol: SHLS
+  name: Shoals Technologies Group, Inc. Class A Common Stock
+- symbol: TRNO
+  name: Terreno Realty Corporation
+- symbol: ACIW
+  name: ACI Worldwide, Inc. Common Stock
+- symbol: FA
+  name: First Advantage Corporation Common Stock
+- symbol: INOD
+  name: Innodata Inc. Common Stock
+- symbol: ESLT
+  name: Elbit Systems Ltd. Ordinary Shares
+- symbol: KRC
+  name: Kilroy Realty Corp.
+- symbol: CGON
+  name: CG Oncology, Inc. Common stock
+- symbol: BFLY
+  name: Butterfly Network, Inc.
+- symbol: ASH
+  name: Ashland Inc.
+- symbol: VC
+  name: Visteon Corporation Common Stock
+- symbol: SHOO
+  name: Steven Madden, Ltd. Common Stock
+- symbol: CTRI
+  name: Centuri Holdings, Inc.
+- symbol: TXNM
+  name: TXNM Energy, Inc.
+- symbol: RITM
+  name: Rithm Capital Corp.
+- symbol: ALGT
+  name: Allegiant Travel Company Common Stock
+- symbol: NSIT
+  name: Insight Enterprises, Inc. Common Stock
+- symbol: ELVN
+  name: Enliven Therapeutics, Inc. Common Stock
+- symbol: VVX
+  name: V2X, Inc.
+- symbol: ACAD
+  name: ACADIA Pharmaceuticals Inc. Common Stock
+- symbol: OBDC
+  name: Blue Owl Capital Corporation
+- symbol: OII
+  name: Oceaneering International Inc.
+- symbol: FOX
+  name: Fox Corporation Class B Common Stock
+- symbol: KT
+  name: KT Corp.
+- symbol: FSS
+  name: Federal Signal Corp.
+- symbol: EEFT
+  name: Euronet Worldwide, Inc. Common Stock
+- symbol: AMTM
+  name: Amentum Holdings, Inc.
+- symbol: DSGX
+  name: Descartes Systems Group Inc. (The) Common Stock
+- symbol: L
+  name: Loews Corporation
+- symbol: PRM
+  name: Perimeter Solutions, Inc.
+- symbol: RDNT
+  name: RadNet, Inc. Common Stock
+- symbol: TNGX
+  name: Tango Therapeutics, Inc.
+- symbol: UTI
+  name: Universal Technical Institute, Inc.
+- symbol: RLI
+  name: RLI Corp.
+- symbol: IMVT
+  name: Immunovant, Inc. Common Stock
+- symbol: CRC
+  name: California Resources Corporation
+- symbol: IRDM
+  name: Iridium Communications Inc Common Stock
+- symbol: DCO
+  name: Ducommun Incorporated
+- symbol: ESTA
+  name: Establishment Labs Holdings Inc. Common Shares
+- symbol: APLE
+  name: Apple Hospitality REIT, Inc.
+- symbol: FIBK
+  name: First Interstate BancSystem, Inc. Common Stock (DE)
+- symbol: FSM
+  name: Fortuna Mining Corp.
+- symbol: WK
+  name: Workiva Inc.
+- symbol: MTG
+  name: MGIC Investment Corp.
+- symbol: RCI
+  name: Rogers Communications, Inc.
+- symbol: QUBT
+  name: Quantum Computing Inc. Common Stock
+- symbol: TNDM
+  name: Tandem Diabetes Care, Inc. Common Stock
+- symbol: SRPT
+  name: Sarepta Therapeutics, Inc. Common Stock (DE)
+- symbol: HGV
+  name: Hilton Grand Vacations Inc. Common Stock
+- symbol: BIPC
+  name: Brookfield Infrastructure Corporation Class A Exchangeable Subordinate Voting
+    Shares
+- symbol: SG
+  name: Sweetgreen, Inc.
+- symbol: FLY
+  name: Firefly Aerospace Inc. Common Stock
+- symbol: XENE
+  name: Xenon Pharmaceuticals Inc. Common Shares
+- symbol: CNR
+  name: Core Natural Resources, Inc.
+- symbol: SLF
+  name: Sun Life Financial Inc.
+- symbol: GEO
+  name: The GEO Group, Inc.
+- symbol: EXTR
+  name: Extreme Networks, Inc. Common Stock
+- symbol: PGY
+  name: Pagaya Technologies Ltd. Class A Ordinary Shares
+- symbol: HUN
+  name: Huntsman Corporation
+- symbol: UNF
+  name: Unifirst Corp
+- symbol: PGEN
+  name: Precigen, Inc. Common Stock
+- symbol: AEG
+  name: Aegon Ltd.
+- symbol: MEOH
+  name: Methanex Corporation Common Stock
+- symbol: HESM
+  name: Hess Midstream LP Class A Share representing a limited partner Interest
+- symbol: VOYG
+  name: Voyager Technologies, Inc.
+- symbol: GPOR
+  name: Gulfport Energy Corporation
+- symbol: ERO
+  name: Ero Copper Corp.
+- symbol: AESI
+  name: Atlas Energy Solutions Inc.
+- symbol: BEP
+  name: Brookfield Renewable Partners L.P.
+- symbol: MRX
+  name: Marex Group Limited Ordinary Shares
+- symbol: HWC
+  name: Hancock Whitney Corporation Common Stock
+- symbol: CVSA
+  name: Covista Inc.
+- symbol: NUVB
+  name: Nuvation Bio Inc.
+- symbol: ZG
+  name: Zillow Group, Inc. Class A Common Stock
+- symbol: TFII
+  name: TFI International Inc.
+- symbol: RXO
+  name: RXO, Inc.
+- symbol: MFP
+  name: Midera Food Processing, Inc. Common Stock
+- symbol: WGS
+  name: GeneDx Holdings Corp. Class A Common Stock
+- symbol: CNX
+  name: CNX Resources Corporation
+- symbol: PPC
+  name: Pilgrim's Pride Corporation Common Stock
+- symbol: OGN
+  name: Organon & Co.
+- symbol: ATRO
+  name: Astronics Corporation Common Stock
+- symbol: FTS
+  name: Fortis Inc. Common Shares
+- symbol: ATRC
+  name: AtriCure, Inc. Common Stock
+- symbol: RAMP
+  name: LiveRamp Holdings, Inc. Common Stock
+- symbol: VRDN
+  name: Viridian Therapeutics, Inc. Common Stock
+- symbol: HAYW
+  name: Hayward Holdings, Inc.
+- symbol: SBLK
+  name: Star Bulk Carriers Corp. Common Shares
+- symbol: BRBR
+  name: BellRing Brands, Inc.
+- symbol: DXC
+  name: DXC Technology Company
+- symbol: PBA
+  name: PEMBINA PIPELINE CORPORATION
+- symbol: PFSI
+  name: PennyMac Financial Services, Inc. Common Stock
+- symbol: GRAL
+  name: GRAIL, Inc. Common Stock
+- symbol: CSTM
+  name: Constellium SE Class A Ordinary shares
+- symbol: INTR
+  name: Inter & Co. Inc. Class A Common Shares
+- symbol: BHVN
+  name: Biohaven Ltd.
+- symbol: GO
+  name: Grocery Outlet Holding Corp. Common Stock
+- symbol: AFG
+  name: American Financial Group, Inc.
+- symbol: CXW
+  name: CoreCivic, Inc.
+- symbol: AUB
+  name: Atlantic Union Bankshares Corporation
+- symbol: PPLI
+  name: People Incorporated Common Stock
+- symbol: TCBI
+  name: Texas Capital Bancshares, Inc. Common Stock
+- symbol: IOND
+  name: Ionic Digital Inc. Class A Common Stock
+- symbol: AVAH
+  name: Aveanna Healthcare Holdings Inc. Common Stock
+- symbol: THO
+  name: Thor Industries, Inc.
+- symbol: SAM
+  name: Boston Beer Company
+- symbol: LIF
+  name: Life360, Inc. Common Stock
+- symbol: FLO
+  name: Flowers Foods, Inc.
+- symbol: KBH
+  name: KB Home
+- symbol: ICHR
+  name: Ichor Holdings Ordinary Shares

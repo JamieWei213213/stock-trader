@@ -1,0 +1,57 @@
+# ---- Stock Trader configuration ----
+# Secrets (API keys) go in .env, NOT here.
+
+accounts:
+  small:            # $1k paper account. Under $25k => PDT applies. Swing style, once daily.
+    starting_cash: 1000
+    cadence: daily               # 12:45pm entry cycle
+    max_positions: 3
+    risk_per_trade_pct: 0.02     # a stop-out loses 2% of equity ($20). Sizing = risk / stop distance.
+    atr_stop_mult: 2.0           # stop = entry - 2 x ATR(14)
+    reward_mult: 2.0             # target = entry + 2 x stop distance
+    max_heat_pct: 0.08           # total open risk (sum of stop distances x qty) <= 8% of equity
+    max_position_pct: 0.40       # hard cap on any single position
+    max_hold_days: 10
+    allow_day_trades: false      # never close same day (avoids PDT flags)
+  large:            # $100k paper account. Over $25k => no PDT limit. Checks market twice a day.
+    starting_cash: 100000
+    cadence: twice_daily         # 6:05am look + 12:45pm entry cycle (see vps/crontab.txt)
+    max_positions: 8
+    risk_per_trade_pct: 0.005    # a stop-out loses 0.5% of equity ($500); raise to 0.0075 after two clean weeks
+    atr_stop_mult: 2.0
+    reward_mult: 2.0
+    max_heat_pct: 0.06
+    max_position_pct: 0.15
+    max_hold_days: 5
+    allow_day_trades: true
+
+screener:
+  variant: pullback_in_uptrend   # ranking rule; see VARIANTS in trader/screener.py, test with `python backtest.py --sweep`
+  universe_size: 500             # build_universe.py keeps this many most-liquid US stocks in universe.yaml
+  wide_pool_size: 1500           # ...and this many in universe_wide.yaml (backtest pool, reduces survivorship bias)
+  candidates_per_cycle: 6        # how many names Claude researches each run (main cost lever)
+  min_avg_dollar_volume: 1500000  # on Alpaca's free IEX feed (2-3% of consolidated volume) this ~= $50M+ real. Don't raise blindly.
+  lookback_days: 300             # trading days of bars for the live screen (12-2 momentum needs 252)
+
+research:
+  research_model: claude-haiku-4-5-20251001   # cheapest, per-stock forecasts
+  ranking_model: claude-sonnet-5              # one call per cycle to decide trades
+  research_max_tokens: 300
+  ranking_max_tokens: 900
+  news_items_per_stock: 6
+  article_chars: 500             # characters of each article body passed to Haiku (0 = headlines only)
+  news_lookback_hours: 36
+  cache_hours: 3                 # reuse a stock's research if the same headlines were seen within this window
+  min_expected_return_pct: 1.5   # manager may buy only if Haiku's 5-day forecast >= this ...
+  min_confidence: 0.6            # ... and confidence >= this
+  earnings_blackout_days: 2      # no new buys within this many trading days of an earnings report (needs FINNHUB_KEY)
+  daily_usd_cap: 1.00            # hard stop: no more Claude calls today once exceeded
+
+# Prices (USD per million tokens) used for cost logging. Update if Anthropic changes them.
+pricing:
+  claude-haiku-4-5-20251001: {input: 1.0, output: 5.0}
+  claude-sonnet-5: {input: 2.0, output: 10.0}
+
+paths:
+  state_dir: state
+  reports_dir: reports

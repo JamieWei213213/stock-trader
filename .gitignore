@@ -1,0 +1,12 @@
+.env
+.venv/
+state/
+reports/
+logs/
+data/
+__pycache__/
+
+# private planning notes (kept out of the public repo)
+private/
+PLAN.md
+STATUS.md
