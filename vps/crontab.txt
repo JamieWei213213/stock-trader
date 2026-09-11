@@ -7,15 +7,16 @@ PY=/opt/stocktrader/.venv/bin/python
 # $1k account: once daily at 12:45pm — entries fill near the close (backtest: close entries beat open entries)
 45 12 * * 1-5  cd $APP && $PY run_cycle.py --account small  >> logs/small.log 2>&1   # stocktrader
 
-# $100k account: 6:05am look (mostly manages existing positions) + 12:45pm entry cycle
-5  6  * * 1-5  cd $APP && $PY run_cycle.py --account large  >> logs/large.log 2>&1   # stocktrader
+# $100k account: 6:05am manage-only look (sells / time stops, no new buys) + 12:45pm entry cycle
+5  6  * * 1-5  cd $APP && $PY run_cycle.py --account large --mode manage >> logs/large.log 2>&1   # stocktrader
 45 12 * * 1-5  cd $APP && $PY run_cycle.py --account large  >> logs/large.log 2>&1   # stocktrader
 
 # Rebuild the ~500-stock universe every Sunday 6pm (takes a few minutes)
 0  18 * * 0    cd $APP && $PY build_universe.py >> logs/universe.log 2>&1              # stocktrader
 
-# Weekly agent evaluation report (Fridays after close)
+# Weekly agent evaluation report (Fridays after close) and the monthly system report (1st of the month)
 0  14 * * 5    cd $APP && $PY eval_agents.py --md >> logs/eval.log 2>&1                 # stocktrader
+30 14 1 * *    cd $APP && $PY monthly_report.py >> logs/monthly.log 2>&1                # stocktrader
 
 # End-of-day scoreboard for both accounts
 15 13 * * 1-5  cd $APP && $PY daily_summary.py >> logs/summary.log 2>&1              # stocktrader

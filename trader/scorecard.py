@@ -14,7 +14,10 @@ from pathlib import Path
 import pandas as pd
 
 FIELDS = ["logged", "account", "symbol", "rank", "price", "expected_5d_pct", "confidence", "bias",
-          "approved", "acted", "ret_1d", "ret_5d", "ret_10d"]
+          "approved", "acted", "ret_1d", "ret_5d", "ret_10d",
+          # v3: per-agent components so eval_agents.py can ablate (news-only vs combined vs each agent)
+          "news_exp", "news_conf", "filings_dir", "filings_tilt", "memory_status", "memory_adj",
+          "vetoed", "regime", "mode"]
 
 
 class Scorecard:
@@ -23,6 +26,15 @@ class Scorecard:
         if not self.path.exists():
             with open(self.path, "w", newline="", encoding="utf-8") as f:
                 csv.DictWriter(f, FIELDS).writeheader()
+        else:   # migrate a v2 file: add the new columns (empty) so the header matches FIELDS
+            with open(self.path, encoding="utf-8") as f:
+                header = f.readline().strip().split(",")
+            if header != FIELDS:
+                df = pd.read_csv(self.path)
+                for c in FIELDS:
+                    if c not in df:
+                        df[c] = ""
+                df[FIELDS].to_csv(self.path, index=False)
 
     def log(self, account: str, rows: list[dict]):
         now = datetime.now().strftime("%Y-%m-%d %H:%M")

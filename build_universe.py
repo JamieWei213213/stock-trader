@@ -13,6 +13,8 @@ Any universe name not in watchlist.yaml is treated as volatile if its ATR% is ab
 from __future__ import annotations
 
 import argparse
+import json
+import os
 import re
 import time
 from datetime import datetime, timedelta, timezone
@@ -78,10 +80,37 @@ def liquidity_table(broker: Broker, symbols: list[str], days: int = 30, chunk: i
     return pd.concat(rows) if rows else pd.DataFrame()
 
 
+def industry_tags(symbols: list[str], state_dir, key: str) -> dict[str, str]:
+    """v3: Finnhub company profile 'finnhubIndustry' per symbol, cached forever in state/industries.json
+    (industries rarely change). Free tier = 60 calls/min, so ~500 new names take ~9 minutes the first time."""
+    import requests
+    path = state_dir / "industries.json"
+    cache = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    missing = [s for s in symbols if s not in cache]
+    if missing and not key:
+        print(f"  [sectors] FINNHUB_KEY not set; {len(missing)} names without industry tags (risk reviewer skips them)")
+        return cache
+    for i, sym in enumerate(missing, 1):
+        try:
+            r = requests.get("https://finnhub.io/api/v1/stock/profile2", params={"symbol": sym, "token": key}, timeout=15)
+            if r.status_code == 429:
+                time.sleep(20); r = requests.get("https://finnhub.io/api/v1/stock/profile2", params={"symbol": sym, "token": key}, timeout=15)
+            cache[sym] = (r.json() or {}).get("finnhubIndustry") or "unknown"
+        except Exception as e:
+            cache[sym] = "unknown"; print(f"  [sectors] {sym}: {e}")
+        if i % 25 == 0:
+            path.write_text(json.dumps(cache, indent=0), encoding="utf-8")
+            print(f"  [sectors] {i}/{len(missing)} tagged", end="\r")
+        time.sleep(1.05)   # 60/min
+    path.write_text(json.dumps(cache, indent=0), encoding="utf-8")
+    return cache
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--size", type=int, default=None)
     ap.add_argument("--min-price", type=float, default=5.0)
+    ap.add_argument("--no-sectors", action="store_true", help="skip Finnhub industry tagging (v3 risk reviewer uses the tags)")
     args = ap.parse_args()
     s = Settings()
     size = args.size or s.cfg["screener"].get("universe_size", 500)
@@ -101,14 +130,17 @@ def main():
         if sym not in top:
             top.append(sym)
     vol_median = float(tab["atr_pct"].median())
+    inds = {} if args.no_sectors else industry_tags(top, s.state_dir, os.getenv("FINNHUB_KEY", ""))
     out = []
     for sym in top:
         if sym in manual:
             out.append({"symbol": sym, "name": names.get(sym, ""), "sector": manual[sym].get("sector", "?"),
+                        "industry": inds.get(sym, manual[sym].get("industry", "unknown")),
                         "volatile": bool(manual[sym].get("volatile", False))})
         else:
             atr = float(tab.loc[sym, "atr_pct"]) if sym in tab.index else vol_median
-            out.append({"symbol": sym, "name": names.get(sym, ""), "sector": "auto", "volatile": bool(atr > vol_median * 1.5)})
+            out.append({"symbol": sym, "name": names.get(sym, ""), "sector": "auto", "industry": inds.get(sym, "unknown"),
+                        "volatile": bool(atr > vol_median * 1.5)})
 
     path = s.root / "universe.yaml"
     with open(path, "w", encoding="utf-8") as f:

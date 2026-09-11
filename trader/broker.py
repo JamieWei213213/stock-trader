@@ -13,7 +13,9 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from alpaca.trading.enums import OrderSide, TimeInForce, OrderClass
 from alpaca.trading.requests import (
+    GetOrdersRequest,
     MarketOrderRequest,
+    ReplaceOrderRequest,
     StopLossRequest,
     TakeProfitRequest,
 )
@@ -139,6 +141,23 @@ class Broker:
                 except Exception:
                     pass
         return self.trading.close_position(symbol)
+
+    def stop_leg(self, symbol: str):
+        """The open SELL stop order protecting a position (bracket child leg) -> (order_id, stop_price) or None."""
+        # After the bracket parent fills, the stop leg sits in status 'held' (OCO sibling of the limit leg) and is NOT
+        # returned by status=open; and nested legs hang off the (filled) parent. So query ALL and pick by the leg's state.
+        from alpaca.trading.enums import QueryOrderStatus
+        live = {"new", "held", "accepted", "pending_new", "partially_filled", "pending_replace"}
+        for o in self.trading.get_orders(GetOrdersRequest(status=QueryOrderStatus.ALL, symbols=[symbol], nested=True, limit=50)):
+            for leg in [o] + list(o.legs or []):
+                if (leg.symbol == symbol and str(leg.side).endswith("SELL") and "stop" in str(leg.type).lower()
+                        and leg.stop_price and str(leg.status).split(".")[-1].lower() in live):
+                    return str(leg.id), float(leg.stop_price)
+        return None
+
+    def replace_stop(self, order_id: str, new_stop: float):
+        """Ratchet a resting stop order to a new price (v3 trailing stop)."""
+        return self.trading.replace_order_by_id(order_id, ReplaceOrderRequest(stop_price=round(new_stop, 2)))
 
     def open_orders(self) -> list[dict]:
         return [

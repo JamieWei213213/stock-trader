@@ -1,4 +1,4 @@
-"""Claude research agents (v2).
+"""Claude research agents (v2 news agent; v3 adds filings/memory/post-mortem in filings.py and memory.py).
 
 - research_stock(): one cheap Haiku call per candidate -> numeric forecast JSON.
   v2 changes backed by RESEARCH.md §1: the company name and ticker are hidden from the model
@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import math
 import re
+import threading
 import time
 
 import anthropic
@@ -67,7 +68,8 @@ def anonymize(text: str, symbol: str, name: str | None) -> str:
 
 class Agents:
     def __init__(self, api_key: str, research_cfg: dict, costs: CostTracker, cache_path=None, names: dict | None = None):
-        self.client = anthropic.Anthropic(api_key=api_key)
+        # SDK timeout < orchestrator timeout (60s) so a hung call really ends instead of running on in its thread
+        self.client = anthropic.Anthropic(api_key=api_key, timeout=float(research_cfg.get("call_timeout_s", 45)), max_retries=1)
         self.cfg = research_cfg
         self.costs = costs
         self.names = names or {}
@@ -80,6 +82,7 @@ class Agents:
                 self.stats.update(json.loads(self.stats_path.read_text(encoding="utf-8")))
             except json.JSONDecodeError:
                 pass
+        self.lock = threading.Lock()   # v3: agents run concurrently; stats/cache/cost files need a lock
         self.cache: dict = {}
         if cache_path and cache_path.exists():
             try:
@@ -100,19 +103,21 @@ class Agents:
         return None
 
     def _cache_put(self, symbol: str, key: str, result: dict):
-        self.cache[symbol] = {"key": key, "t": time.time(),
-                              "result": {k: v for k, v in result.items() if not k.startswith("_")}}
-        if self.cache_path:
-            self.cache_path.write_text(json.dumps(self.cache), encoding="utf-8")
+        with self.lock:
+            self.cache[symbol] = {"key": key, "t": time.time(),
+                                  "result": {k: v for k, v in result.items() if not k.startswith("_")}}
+            if self.cache_path:
+                self.cache_path.write_text(json.dumps(self.cache), encoding="utf-8")
 
     def _bump(self, key: str, n: int = 1, model: str | None = None):
-        self.stats[key] = self.stats.get(key, 0) + n
-        if model:
-            m = self.stats["by_model"].setdefault(model, {"calls": 0, "parse_failures": 0})
-            if key in m:
-                m[key] += n
-        if self.stats_path:
-            self.stats_path.write_text(json.dumps(self.stats), encoding="utf-8")
+        with self.lock:
+            self.stats[key] = self.stats.get(key, 0) + n
+            if model:
+                m = self.stats["by_model"].setdefault(model, {"calls": 0, "parse_failures": 0})
+                if key in m:
+                    m[key] += n
+            if self.stats_path:
+                self.stats_path.write_text(json.dumps(self.stats), encoding="utf-8")
 
     # ---- calls ----
     def _call(self, model: str, system: str, user: str, max_tokens: int) -> dict | None:
@@ -121,10 +126,11 @@ class Agents:
             return None
         r = self.client.messages.create(model=model, max_tokens=max_tokens, system=system,
                                         messages=[{"role": "user", "content": user}])
-        usd = self.costs.record(model, r.usage.input_tokens, r.usage.output_tokens)
+        with self.lock:
+            usd = self.costs.record(model, r.usage.input_tokens, r.usage.output_tokens)
+            self.stats["input_tokens"] += r.usage.input_tokens
+            self.stats["output_tokens"] += r.usage.output_tokens
         self._bump("calls", model=model)
-        self.stats["input_tokens"] += r.usage.input_tokens
-        self.stats["output_tokens"] += r.usage.output_tokens
         text = "".join(getattr(c, "text", "") for c in r.content)
         out = _extract_json(text)
         if out is None:
@@ -175,7 +181,9 @@ class Agents:
                     "min_expected_return_pct": self.cfg.get("min_expected_return_pct", 1.5),
                     "min_confidence": self.cfg.get("min_confidence", 0.6),
                 },
-                "equity": snapshot["equity"], "cash": snapshot["cash"], "positions": snapshot["positions"],
+                "equity": snapshot["equity"], "cash": snapshot["cash"],
+                # v3: never show P&L to a model (disposition effect); symbol + size only
+                "positions": [{"symbol": p["symbol"], "qty": p["qty"]} for p in snapshot["positions"]],
                 "analyst_forecasts": [{k: v for k, v in r.items() if not k.startswith("_")} for r in research],
             },
             separators=(",", ":"),

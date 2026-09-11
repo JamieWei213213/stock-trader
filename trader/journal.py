@@ -75,6 +75,14 @@ class Journal:
                 t["pending_exit_reason"] = reason
         self._save()
 
+    def mark_trailing(self, account: str, symbol: str, stop: float):
+        """v3: the executor ratcheted the stop; a later stop fill is a 'trail_stop', not the initial stop."""
+        for t in self.trades:
+            if t["account"] == account and t["symbol"] == symbol and t["status"] == "open":
+                t["trailing"] = True
+                t["trail_stop"] = stop           # t["stop"] stays the entry stop (post-mortem / journal CLI use it)
+        self._save()
+
     def open_trades(self, account: str | None = None) -> list[dict]:
         return [t for t in self.trades if t["status"] == "open" and (account is None or t["account"] == account)]
 
@@ -108,7 +116,8 @@ class Journal:
                 continue
             o = sells[0]
             otype = str(o.type).split(".")[-1].lower()
-            reason = t.get("pending_exit_reason") or {"stop": "stop_loss", "limit": "take_profit", "market": "sold"}.get(otype, otype)
+            reason = t.get("pending_exit_reason") or {"stop": "trail_stop" if t.get("trailing") else "stop_loss",
+                                                       "limit": "take_profit", "market": "sold"}.get(otype, otype)
             self.close_trade(t, float(o.filled_avg_price), o.filled_at.astimezone().strftime("%Y-%m-%d %H:%M"), reason)
             closed += 1
         return closed

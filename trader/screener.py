@@ -107,13 +107,15 @@ def score_table(bars: pd.DataFrame, symbols: list[str], is_volatile, min_dollar_
     return score_at(feats, feats["price"].index[-1], is_volatile, min_dollar_vol, variant, keep=keep)
 
 
-def screen(settings: Settings, broker: Broker, keep: list[str] | None = None) -> pd.DataFrame:
-    """keep = currently held symbols: always included (and fetched) so they get re-researched every cycle."""
+def screen(settings: Settings, broker: Broker, keep: list[str] | None = None, return_bars: bool = False):
+    """keep = currently held symbols: always included (and fetched) so they get re-researched every cycle.
+    return_bars=True also returns the raw bars (v3 risk reviewer computes correlations from them)."""
     cfg = settings.cfg["screener"]
     symbols = list(dict.fromkeys(list(settings.symbols) + list(keep or [])))
     bars = broker.daily_bars(symbols, cfg.get("lookback_days", LOOKBACK_DAYS))
-    return score_table(bars, symbols, settings.is_volatile, cfg["min_avg_dollar_volume"],
-                       cfg.get("variant", "pullback_in_uptrend"), keep=keep)
+    table = score_table(bars, symbols, settings.is_volatile, cfg["min_avg_dollar_volume"],
+                        cfg.get("variant", "pullback_in_uptrend"), keep=keep)
+    return (table, bars) if return_bars else table
 
 
 def pick_candidates(df: pd.DataFrame, n: int, held: list[str]) -> list[str]:

@@ -7,6 +7,10 @@ Answers, with numbers:
   3. Selection     do the names Claude approved beat the ones it rejected, and the screener's raw top-6?
   4. Manager       were the PM's buy / hold / sell calls right over the next 5 days?
   5. Trades        realized P&L by exit reason (from the journal)
+  v3 additions:
+  6. Veto          were the names the agents vetoed worse than the ones they passed? (by veto reason)
+  7. Ablation      forecast quality of news-only vs combined (news + filings + memory); each agent's marginal value
+  8. Fleet health  per-agent success / cache / cost / latency from state/cycles, and post-mortem lesson mix
 
 Data: state/scorecard.csv (filled by daily_summary.py), state/journal/, state/trades.json, state/agent_stats.json.
 Usage:
@@ -24,6 +28,7 @@ import numpy as np
 import pandas as pd
 
 from trader.journal import Journal
+from trader.scorecard import FIELDS
 from trader.settings import Settings
 
 MIN_N = 10  # below this, print numbers but flag them as too early
@@ -153,13 +158,121 @@ def section_trades(j: Journal) -> list[str]:
     return ["## 5. Realized trades", j.summary()]
 
 
+# ------------------------------------------------------------------------------------------ v3 sections
+def _corr(d: pd.DataFrame, a: str, b: str) -> tuple[float, float, int]:
+    x = d[[a, b]].dropna()
+    if len(x) < 3:
+        return float("nan"), float("nan"), len(x)
+    return float(x.corr().iloc[0, 1]), float(x.corr(method="spearman").iloc[0, 1]), len(x)
+
+
+def section_veto(sc: pd.DataFrame) -> list[str]:
+    out = ["## 6. Veto accuracy (v3 decision rule): passed vs vetoed screener picks"]
+    if "vetoed" not in sc or sc.empty:
+        return out + ["(no v3 rows yet)"]
+    d = sc[sc["mode"].astype(str) == "veto"].dropna(subset=["ret_5d"]).copy()   # held rows already removed in load_scorecard
+    if len(d) < 3:
+        return out + [f"(only {len(d)} v3 rows with realized returns)"]
+    d["vetoed"] = d["vetoed"].fillna("").astype(str)
+    d["is_veto"] = d["vetoed"].str.len() > 0
+    d["kind"] = np.select(
+        [d["vetoed"] == "", d["vetoed"].str.startswith("forecast"), d["vetoed"].str.startswith("bearish"),
+         d["vetoed"].str.startswith("memory"), d["vetoed"].str.startswith("risk reviewer"), d["vetoed"].str.startswith("regime"),
+         d["vetoed"].str.startswith("no slot"), d["vetoed"].str.startswith("no forecast")],
+        ["passed", "veto: forecast low", "veto: bearish", "veto: thesis broken", "risk reviewer", "regime freeze", "no slot", "agent failed"],
+        "other")
+    for kind, g in d.groupby("kind"):
+        out.append(f"  {kind:>22}: mean 5d {g['ret_5d'].mean() * 100:+.2f}%  hit {(g['ret_5d'] > 0).mean() * 100:.0f}%  n={len(g)}")
+    p, v = d[~d["is_veto"]]["ret_5d"], d[d["is_veto"] & d["kind"].str.startswith("veto")]["ret_5d"]
+    if len(p) >= 3 and len(v) >= 3:
+        out.append(f"  passed minus agent-vetoed: {(p.mean() - v.mean()) * 100:+.2f}%  t = {_t(p, v):.2f}  "
+                   f"({'the veto is earning its keep' if _t(p, v) >= 2 else 'not distinguishable from noise yet'})")
+    out.append("  (a useful veto = the vetoed group does WORSE than the passed group; 'no slot' rows are a free control group)")
+    return out
+
+
+def section_ablation(sc: pd.DataFrame) -> list[str]:
+    out = ["## 7. Ablation: what each agent adds to forecast quality"]
+    if "news_exp" not in sc:
+        return out + ["(no v3 rows yet)"]
+    d = sc.dropna(subset=["ret_5d"]).copy()
+    for c in ("news_exp", "news_conf", "filings_tilt", "memory_adj", "expected_5d_pct"):
+        if c in d:
+            d[c] = pd.to_numeric(d[c], errors="coerce")
+    d = d.dropna(subset=["news_exp"])
+    if len(d) < 3:
+        return out + [f"(only {len(d)} rows with per-agent components)"]
+    d["real"] = d["ret_5d"] * 100
+    rows = [("news only", "news_exp"), ("news + filings + memory (combined)", "expected_5d_pct")]
+    if d["filings_tilt"].notna().any():
+        d["news_plus_filings"] = d["news_exp"] + d["filings_tilt"].fillna(0)
+        rows.insert(1, ("news + filings", "news_plus_filings"))
+    if d["memory_adj"].notna().any():
+        d["news_plus_memory"] = d["news_exp"] + d["memory_adj"].fillna(0)
+        rows.insert(-1, ("news + memory", "news_plus_memory"))
+    out.append(f"n = {len(d)}   (correlation with realized 5-day return; higher = more information; differences < 0.05 are noise at this n)")
+    for label, col in rows:
+        pe, sp, n = _corr(d, col, "real")
+        called = d[d[col].abs() >= 0.5]
+        acc = (np.sign(called[col]) == np.sign(called["real"])).mean() * 100 if len(called) else float("nan")
+        out.append(f"  {label:>36}: Pearson {pe:+.2f}  Spearman {sp:+.2f}  directional {acc:.0f}%")
+    # filings agent on its own: does 'up' beat 'down'?
+    if "filings_dir" in d and d["filings_dir"].notna().any():
+        g = d.dropna(subset=["filings_dir"]).groupby("filings_dir")["real"]
+        out.append("  filings agent alone, mean 5d by earnings_direction: " +
+                   ", ".join(f"{k} {v.mean():+.2f}% (n={len(v)})" for k, v in g))
+        out.append("  (the filings signal is about the NEXT QUARTER; a 5-day read is an early, noisy check — the long-horizon score is in monthly_report.py)")
+    if "memory_status" in d and d["memory_status"].notna().any():
+        g = d.dropna(subset=["memory_status"]).groupby("memory_status")["real"]
+        out.append("  memory agent, mean 5d by thesis_status: " + ", ".join(f"{k} {v.mean():+.2f}% (n={len(v)})" for k, v in g))
+    out.append("  Read: if 'combined' is not above 'news only', the extra agents are cost without value — turn them off in config.yaml.")
+    return out
+
+
+def section_fleet(s: Settings) -> list[str]:
+    out = ["## 8. Fleet health (per agent, from state/cycles/*.json)"]
+    cyc = sorted((s.state_dir / "cycles").glob("*.json")) if (s.state_dir / "cycles").exists() else []
+    if not cyc:
+        return out + ["(no cycle records yet)"]
+    agg: dict[str, dict] = {}
+    for p in cyc[-200:]:
+        try:
+            c = json.loads(p.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        for k, v in (c.get("summary") or {}).get("agents", {}).items():
+            a = agg.setdefault(k, {"calls": 0, "ok": 0, "cached": 0, "failed": 0, "usd": 0.0, "seconds": 0.0})
+            for f in a:
+                a[f] += v.get(f, 0)
+    out.append(f"cycles: {len(cyc)}")
+    for k, a in agg.items():
+        n = a["calls"] or 1
+        out.append(f"  {k:>10}: {a['calls']:4d} calls  ok {a['ok'] / n * 100:5.1f}%  cached {a['cached'] / n * 100:4.0f}%  "
+                   f"failed {a['failed']:3d}  ${a['usd']:.3f}  avg {a['seconds'] / n:.1f}s")
+    lp = s.state_dir / "lessons.jsonl"
+    if lp.exists():
+        les = [json.loads(l) for l in lp.read_text(encoding="utf-8").splitlines() if l.strip()]
+        if les:
+            mix = pd.Series([l.get("mistake_type") for l in les]).value_counts()
+            out.append(f"post-mortems: {len(les)} — " + ", ".join(f"{k} {v}" for k, v in mix.items()) +
+                       f"; avoidable {sum(bool(l.get('avoidable')) for l in les)}")
+            for l in les[-3:]:
+                out.append(f"  latest: {l['symbol']} {l.get('exit_reason')} {float(l.get('pnl_pct') or 0) * 100:+.1f}% [{l.get('mistake_type')}] {l.get('lesson')}")
+    return out
+
+
 # ------------------------------------------------------------------------------------------ data
 def load_scorecard(s: Settings) -> pd.DataFrame:
     p = s.state_dir / "scorecard.csv"
     if not p.exists():
-        return pd.DataFrame()
+        return pd.DataFrame(columns=FIELDS)
     df = pd.read_csv(p)
-    for c in ("expected_5d_pct", "confidence", "ret_1d", "ret_5d", "ret_10d", "rank"):
+    for c in FIELDS:
+        if c not in df:
+            df[c] = np.nan
+    if "vetoed" in df:   # v3: rows for names already held are re-forecasts, not picks — keep them out of the pick groups
+        df = df[~df["vetoed"].fillna("").astype(str).str.startswith("held")]
+    for c in ("expected_5d_pct", "confidence", "ret_1d", "ret_5d", "ret_10d", "rank", "news_exp", "news_conf", "filings_tilt", "memory_adj"):
         if c in df:
             df[c] = pd.to_numeric(df[c], errors="coerce")
     return df
@@ -196,6 +309,14 @@ def demo_data(s: Settings):
         "approved": (exp >= 1.5) & (conf >= 0.6), "acted": (exp >= 1.5) & (conf >= 0.6) & (rng.random(n) < 0.6),
         "ret_1d": (real / 5 / 100).round(4), "ret_5d": (real / 100).round(4), "ret_10d": (real * 1.3 / 100).round(4),
     })
+    # v3 components: news forecast + a filings tilt that carries a little extra signal + a memory nudge that carries none
+    tilt = np.where(rng.random(n) < 0.7, np.sign(real + rng.normal(0, 4, n)) * 0.3, 0.0)
+    df["news_exp"] = (exp - tilt).round(2); df["news_conf"] = conf.round(2)
+    df["filings_dir"] = np.where(tilt > 0, "up", np.where(tilt < 0, "down", "flat")); df["filings_tilt"] = tilt.round(2)
+    df["memory_status"] = rng.choice(["none", "intact", "broken"], n, p=[0.6, 0.3, 0.1]); df["memory_adj"] = 0.0
+    df["vetoed"] = np.where(exp < -0.5, "forecast " + exp.round(1).astype(str) + "% < -0.5%",
+                            np.where(rng.random(n) < 0.2, "no slot (positions full)", ""))
+    df["regime"] = "risk-on"; df["mode"] = "veto"
     (s.state_dir / "scorecard.csv").write_text(df.to_csv(index=False), encoding="utf-8")
     (s.state_dir / "agent_stats.json").write_text(json.dumps({"calls": 140, "parse_failures": 2, "cache_hits": 61,
         "input_tokens": 210000, "output_tokens": 18000,
@@ -219,10 +340,14 @@ def main():
     lines += section_forecasts(sc) + [""]
     lines += section_selection(sc) + [""]
     lines += section_manager(s, j, bars) + [""]
-    lines += section_trades(j)
+    lines += section_trades(j) + [""]
+    lines += section_veto(sc) + [""]
+    lines += section_ablation(sc) + [""]
+    lines += section_fleet(s)
     lines += ["", "How to read this: the screener backtest (backtest.py) tests the rules; THIS tests the LLM layer on top of them. "
               "Section 2 asks whether the forecasts carry information at all, section 3 whether acting on them beats not acting, "
-              "section 4 whether the manager's calls were right. Treat anything with n < 30 as a preview."]
+              "section 4 whether the manager's calls were right, section 6 whether the v3 veto helps, section 7 which agents earn "
+              "their cost. Treat anything with n < 30 as a preview."]
     text = "\n".join(lines)
     print(text)
     if args.md:

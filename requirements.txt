@@ -5,3 +5,4 @@ numpy>=1.26
 pyyaml>=6.0
 python-dotenv>=1.0
 pyarrow>=15.0
+# optional, PC only:  pip install mcp     (mcp_journal.py for Claude Desktop)

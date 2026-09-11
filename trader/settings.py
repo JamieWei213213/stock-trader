@@ -40,6 +40,8 @@ class Settings:
                     manual[a["symbol"]].setdefault("name", a["name"])
             self.watchlist = merged
         self.names: dict[str, str] = {w["symbol"]: w.get("name", "") for w in self.watchlist if w.get("name")}
+        # v3: industry tags (build_universe.py --sectors fills them from Finnhub) for the risk reviewer
+        self.industries: dict[str, str] = {w["symbol"]: w["industry"] for w in self.watchlist if w.get("industry")}
         self.state_dir = root / self.cfg["paths"]["state_dir"]
         self.reports_dir = root / self.cfg["paths"]["reports_dir"]
         self.state_dir.mkdir(exist_ok=True)
@@ -48,6 +50,9 @@ class Settings:
     # ---- accounts ----
     def account_cfg(self, name: str) -> dict:
         return self.cfg["accounts"][name]
+
+    def candidates_per_cycle(self, name: str) -> int:
+        return int(self.cfg["accounts"][name].get("candidates_per_cycle", self.cfg["screener"].get("candidates_per_cycle", 6)))
 
     def creds(self, name: str) -> AccountCreds:
         prefix = f"ALPACA_{name.upper()}"

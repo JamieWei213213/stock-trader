@@ -12,7 +12,15 @@ import os
 from datetime import date, timedelta
 from pathlib import Path
 
+import numpy as np
 import requests
+
+
+def _bdays(a: date, b: date) -> int:
+    """Signed number of weekdays from a to b (b > a positive)."""
+    if b >= a:
+        return int(np.busday_count(a.isoformat(), b.isoformat()))
+    return -int(np.busday_count(b.isoformat(), a.isoformat()))
 
 NASDAQ_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
@@ -24,9 +32,10 @@ NASDAQ_HEADERS = {
 
 
 class EarningsCalendar:
-    def __init__(self, state_dir: Path, blackout_days: int = 2, horizon_days: int = 14):
+    def __init__(self, state_dir: Path, blackout_days: int = 2, horizon_days: int = 21, recent_days: int = 0):
         self.path = state_dir / "earnings.json"
-        self.blackout_days = blackout_days
+        self.blackout_days = blackout_days      # v3: run_cycle passes max(config, account max_hold_days)
+        self.recent_days = recent_days          # v3: also skip names that reported within the last N trading days
         self.horizon_days = horizon_days
         self.key = os.getenv("FINNHUB_KEY", "")
         self.dates: dict[str, str] = {}   # symbol -> next report date (YYYY-MM-DD)
@@ -69,11 +78,12 @@ class EarningsCalendar:
                 self.dates, self.source = cached["dates"], cached.get("source", "cache")
                 return
         end = today + timedelta(days=self.horizon_days)
+        start = today - timedelta(days=int(self.recent_days * 1.5) + 2) if self.recent_days else today   # +2 covers a weekend
         for name, fn in (("finnhub", self._finnhub), ("nasdaq", self._nasdaq)):
             if name == "finnhub" and not self.key:
                 continue
             try:
-                self.dates = fn(today, end)
+                self.dates = fn(start, end)
                 self.source = name
                 self.path.write_text(json.dumps({"fetched": today.isoformat(), "source": name, "dates": self.dates}),
                                      encoding="utf-8")
@@ -93,9 +103,12 @@ class EarningsCalendar:
         return self.dates.get(symbol)
 
     def soon(self, symbol: str) -> bool:
-        """True if the symbol reports within blackout_days trading days (weekends ignored -> calendar days x1.5)."""
+        """True if the symbol reports within blackout_days weekdays ahead, or reported within the last
+        recent_days weekdays (v3). Weekends are skipped; a Friday report is 1 day back on Monday."""
         d = self.dates.get(symbol)
         if not d:
             return False
-        days = (date.fromisoformat(d) - date.today()).days
-        return 0 <= days <= int(self.blackout_days * 1.5)
+        days = _bdays(date.today(), date.fromisoformat(d))   # trading days, weekend-aware
+        if 0 <= days <= self.blackout_days:
+            return True
+        return self.recent_days > 0 and -self.recent_days <= days < 0

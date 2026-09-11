@@ -51,6 +51,16 @@ def main():
         ok = False
         print(f"  FAILED: {e}")
 
+    print("\n=== SEC EDGAR (v3 filings agent) ===")
+    try:
+        from trader.filings import Edgar, extract_quarters
+        e = Edgar(s.state_dir)
+        cik = e.cik("AAPL")
+        q = extract_quarters(e.company_facts(cik), 8)
+        print(f"  AAPL CIK {cik}: {len(q['quarters'])} quarters, latest filed {q['latest_filed']}")
+    except Exception as e:
+        print(f"  WARNING: EDGAR unreachable ({e}) — the filings agent will be skipped (news-only forecasts)")
+
     print("\nALL GOOD" if ok else "\nSomething failed — fix the items above before running cycles.")
     sys.exit(0 if ok else 1)
 

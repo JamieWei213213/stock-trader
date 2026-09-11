@@ -6,6 +6,7 @@ accounts:
     starting_cash: 1000
     cadence: daily               # 12:45pm entry cycle
     max_positions: 3
+    candidates_per_cycle: 6      # names researched per cycle (v3: per account)
     risk_per_trade_pct: 0.02     # a stop-out loses 2% of equity ($20). Sizing = risk / stop distance.
     atr_stop_mult: 2.0           # stop = entry - 2 x ATR(14)
     reward_mult: 2.0             # target = entry + 2 x stop distance
@@ -16,20 +17,70 @@ accounts:
   large:            # $100k paper account. Over $25k => no PDT limit. Checks market twice a day.
     starting_cash: 100000
     cadence: twice_daily         # 6:05am look + 12:45pm entry cycle (see vps/crontab.txt)
-    max_positions: 8
-    risk_per_trade_pct: 0.005    # a stop-out loses 0.5% of equity ($500); raise to 0.0075 after two clean weeks
+    max_positions: 10            # v3: breadth — many small equal-risk bets. 10 x ~9% notional ~= all the cash, no margin
+    candidates_per_cycle: 15     # v3: screener top-15 go to the agents (~$0.03/cycle)
+    risk_per_trade_pct: 0.005    # a stop-out loses 0.5% of equity ($500)
     atr_stop_mult: 2.0
     reward_mult: 2.0
-    max_heat_pct: 0.06
+    max_heat_pct: 0.08           # v3: 6% -> 8% so 12 positions x 0.5% fit (plus a little slack)
     max_position_pct: 0.15
-    max_hold_days: 5
+    max_hold_days: 5             # used for the earnings blackout window and as the review day (see hold.*)
     allow_day_trades: true
+    hold:                        # v3 "middle path" exits (large account only; the small account keeps its hard 10-day stop)
+      review_after_days: 5       # the fresh-forecast thesis check applies from this day on (earlier sells need a clearly negative forecast)
+      stale_days: 10             # from this day, a flat position is the first to go when a better candidate needs its slot
+      stale_band_pct: 1.0        # "flat" = within +/- this % of entry
+      trail_activate_mult: 1.0   # trailing stop turns on once the trade is up by this x the initial stop distance
+      trail_atr_mult: 1.5        # trailing stop = high since entry - this x ATR; only ever ratchets up
+      hard_max_days: 30          # absolute ceiling, keeps a dud from living forever
+
+# v3 shared risk rules (both accounts)
+risk:
+  max_stop_pct: 0.08             # skip a name if 2xATR is more than 8% of price (too wild to size sanely)
+  max_per_industry: 3            # risk reviewer: at most this many open positions in one industry tag
+  max_corr_with_book: 0.75       # risk reviewer: skip a buy whose 60d return correlation with >=2 held names exceeds this
+
+# v3 kill switch (deterministic, no model): freezes NEW buys; existing stops stay live at the broker
+killswitch:
+  enabled: true
+  daily_loss_pct: 0.03           # equity down this much from the day's first cycle -> no new buys for the rest of the day
+  drawdown_pct: 0.08             # equity down this much from its peak -> no new buys until you run `python killswitch.py --reset <account>`
+
+# v3 decision rule (replaces the Sonnet portfolio-manager call)
+decision:
+  mode: veto                     # veto = deterministic rule + Haiku veto (v3). manager = legacy Sonnet call (v2, kept for A/B)
+  rank_by: screener              # screener = buy passers in screener order (the experiment). forecast = order passers by the agents'
+                                 # forecast instead — flip only after eval_agents.py section 2/7 shows the forecasts carry information
+  veto_below_pct: -0.5           # skip a screener pick if the combined forecast is below this ...
+  veto_bearish_conf: 0.6         # ... or the agents are bearish with at least this confidence
+  sell_below_pct: -1.5           # sell a held name if its fresh forecast is below this with confidence >= min_confidence
+  rotation_min_edge_pct: 1.0     # when full: swap only if the new name's forecast beats the weakest held name's FRESH forecast by this
+  max_swaps_per_cycle: 1
+
+# v3 regime monitor (deterministic; scales risk, never picks stocks)
+regime:
+  enabled: true
+  symbol: SPY
+  ma_days: 200
+  risk_mult_below_ma: 0.5        # halve risk per trade when SPY is under its 200-day average
+  vol_window_days: 20
+  vol_spike_mult: 2.0            # no new buys when 20d realized vol > 2x its 1-year median AND SPY is under the MA
+
+# v3 agents (LLM agents only where there is TEXT to read; everything numeric is a deterministic node)
+agents:
+  timeout_s: 60                  # per agent call
+  retries: 1
+  news:        {enabled: true}                       # article bodies -> 5-day forecast (v2 agent)
+  filings:     {enabled: true, cache_days: 90, quarters: 8, weight_pct: 0.5}   # SEC XBRL last 8 quarters -> earnings direction; tilts the forecast by +/- weight_pct
+  memory:      {enabled: true, max_history: 6}      # the symbol's own past forecasts/outcomes/lessons -> thesis intact/broken
+  post_mortem: {enabled: true}                       # 2-line lesson after each closed trade (runs in daily_summary)
+  critic:      {enabled: false}                      # bull/bear critic. OFF: literature + our eval say it adds cost, not accuracy. Kept for the ablation.
 
 screener:
   variant: pullback_in_uptrend   # ranking rule; see VARIANTS in trader/screener.py, test with `python backtest.py --sweep`
   universe_size: 500             # build_universe.py keeps this many most-liquid US stocks in universe.yaml
   wide_pool_size: 1500           # ...and this many in universe_wide.yaml (backtest pool, reduces survivorship bias)
-  candidates_per_cycle: 6        # how many names Claude researches each run (main cost lever)
+  candidates_per_cycle: 6        # fallback if an account has no candidates_per_cycle
   min_avg_dollar_volume: 1500000  # on Alpaca's free IEX feed (2-3% of consolidated volume) this ~= $50M+ real. Don't raise blindly.
   lookback_days: 300             # trading days of bars for the live screen (12-2 momentum needs 252)
 
@@ -44,8 +95,9 @@ research:
   cache_hours: 3                 # reuse a stock's research if the same headlines were seen within this window
   min_expected_return_pct: 1.5   # manager may buy only if Haiku's 5-day forecast >= this ...
   min_confidence: 0.6            # ... and confidence >= this
-  earnings_blackout_days: 2      # no new buys within this many trading days of an earnings report (needs FINNHUB_KEY)
-  daily_usd_cap: 1.00            # hard stop: no more Claude calls today once exceeded
+  earnings_blackout_days: 2      # minimum; v3 uses max(this, the account's max_hold_days) so a report never lands inside a hold
+  earnings_recent_days: 1        # v3: also skip names that reported within the last N trading days (post-announcement noise)
+  daily_usd_cap: 1.50            # hard stop: no more Claude calls today once exceeded
 
 # Prices (USD per million tokens) used for cost logging. Update if Anthropic changes them.
 pricing:
