@@ -51,6 +51,26 @@ class Settings:
     def account_cfg(self, name: str) -> dict:
         return self.cfg["accounts"][name]
 
+    def baseline_date(self, name: str) -> str | None:
+        """v3: measure returns from this date instead of from starting_cash (used when the paper account was not reset)."""
+        d = self.cfg["accounts"][name].get("baseline_date")
+        return str(d) if d else None
+
+    def baseline_equity(self, name: str, fallback: float) -> tuple[float, str]:
+        """(equity on the first recorded day >= baseline_date, that day). Falls back to `fallback` (live equity) before
+        the first record exists, so the return reads 0% on day one rather than jumping."""
+        bd = self.baseline_date(name)
+        if not bd:
+            return float(self.cfg["accounts"][name]["starting_cash"]), "start"
+        p = self.state_dir / "equity_history.csv"
+        if p.exists():
+            import csv
+            with open(p, encoding="utf-8") as f:
+                rows = [r for r in csv.DictReader(f) if r.get("account") == name and r.get("date", "") >= bd]
+            if rows:
+                return float(rows[0]["equity"]), rows[0]["date"]
+        return float(fallback), bd
+
     def candidates_per_cycle(self, name: str) -> int:
         return int(self.cfg["accounts"][name].get("candidates_per_cycle", self.cfg["screener"].get("candidates_per_cycle", 6)))
 

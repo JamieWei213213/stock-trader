@@ -4,6 +4,7 @@
 accounts:
   small:            # $1k paper account. Under $25k => PDT applies. Swing style, once daily.
     starting_cash: 1000
+    baseline_date: 2026-09-14    # v3 start: dashboard / summaries measure P&L from the equity on this date (v1/v2 history kept in files)
     cadence: daily               # 12:45pm entry cycle
     max_positions: 3
     candidates_per_cycle: 6      # names researched per cycle (v3: per account)
@@ -16,6 +17,7 @@ accounts:
     allow_day_trades: false      # never close same day (avoids PDT flags)
   large:            # $100k paper account. Over $25k => no PDT limit. Checks market twice a day.
     starting_cash: 100000
+    baseline_date: 2026-09-14    # v3 start (see small)
     cadence: twice_daily         # 6:05am look + 12:45pm entry cycle (see vps/crontab.txt)
     max_positions: 10            # v3: breadth — many small equal-risk bets. 10 x ~9% notional ~= all the cash, no margin
     candidates_per_cycle: 15     # v3: screener top-15 go to the agents (~$0.03/cycle)

@@ -43,9 +43,9 @@ def main():
             closed = journal.reconcile(name, b, {p["symbol"] for p in snap.positions})
             if closed:
                 print(f"{name}: journal closed {closed} trade(s)")
-            start = s.account_cfg(name)["starting_cash"]
+            start, base_day = s.baseline_equity(name, snap.equity)
             pnl = snap.equity - start
-            print(f"{name:5s} equity ${snap.equity:>12,.2f}  P&L ${pnl:>+10,.2f} ({pnl/start*100:+.2f}%)  "
+            print(f"{name:5s} equity ${snap.equity:>12,.2f}  P&L since {base_day} ${pnl:>+10,.2f} ({pnl/start*100:+.2f}%)  "
                   f"positions {len(snap.positions)}  daytrades(5d) {snap.daytrade_count}")
             for p in snap.positions:
                 print(f"       {p['symbol']:6s} {p['qty']:>6.0f} @ {p['avg_entry']:.2f} -> {p['current']:.2f} "

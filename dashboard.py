@@ -45,13 +45,15 @@ def collect_live(s: Settings) -> dict:
             continue
         brokers[name] = b
         snap = b.snapshot()
-        start_cash = s.account_cfg(name)["starting_cash"]
+        start_cash, base_day = s.baseline_equity(name, snap.equity)   # v3: P&L measured from the baseline date, not starting_cash
         hist = b.trading.get_portfolio_history(
             GetPortfolioHistoryRequest(period="3M", timeframe="1D", extended_hours=False))
         pts = []
+        bd = s.baseline_date(name) or ""
         for t, eq in zip(hist.timestamp, hist.equity):
-            if eq:
-                pts.append([datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%d"), float(eq)])
+            day = datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%d")
+            if eq and day >= bd:
+                pts.append([day, float(eq)])
         # ensure today's live equity is the last point
         today = datetime.now().strftime("%Y-%m-%d")
         if pts and pts[-1][0] == today:
@@ -85,7 +87,7 @@ def collect_live(s: Settings) -> dict:
                 if isinstance(lv, dict):
                     p["stop"], p["target"], p["entry_date"] = lv.get("stop"), lv.get("target"), lv.get("date")
         out["accounts"][name] = {
-            "label": ACCOUNT_LABELS[name], "start": start_cash, "equity": snap.equity, "cash": snap.cash,
+            "label": ACCOUNT_LABELS[name], "start": start_cash, "baseline": base_day, "equity": snap.equity, "cash": snap.cash,
             "daytrades": snap.daytrade_count, "positions": snap.positions, "history": pts, "fills": fills,
             "candles": candles,
         }
@@ -252,7 +254,7 @@ td{padding:7px 8px;border-bottom:1px solid var(--grid)}td.r,th.r{text-align:righ
 <h1 id="title">Stock Trader — paper trading dashboard</h1>
 <div class="sub">Generated __GENERATED__ · Claude spend today $__COST_TODAY__ · this month $__COST_MONTH__ (__CALLS__ calls)</div>
 <div class="tiles" id="tiles"></div>
-<h2 id="chartTitle">Return since start</h2>
+<h2 id="chartTitle">Return since v3 start (__BASELINE__)</h2>
 <div class="card"><div class="legend" id="legend"></div><div id="chart"></div><div class="tip" id="tip"></div></div>
 <h2>Open positions</h2><div class="two" id="positions"></div>
 <div class="candles" id="candles"></div>
@@ -344,7 +346,8 @@ def render(data: dict, page: str = "all") -> str:
     if page != "all":
         data["notes"] = _notes_for(data.get("notes", ""), page)
     c = data.get("costs", {})
-    return (TEMPLATE.replace("__GENERATED__", data["generated"])
+    bases = sorted({a.get("baseline") for a in data.get("accounts", {}).values() if a.get("baseline")})
+    return (TEMPLATE.replace("__GENERATED__", data["generated"]).replace("__BASELINE__", bases[0] if bases else "start")
             .replace("__COST_TODAY__", f"{c.get('today', 0):.3f}")
             .replace("__COST_MONTH__", f"{c.get('month', 0):.2f}")
             .replace("__CALLS__", str(c.get("calls_month", 0)))

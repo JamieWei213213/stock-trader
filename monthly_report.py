@@ -39,14 +39,19 @@ def equity_section(s: Settings, month: str) -> list[str]:
         g = h[h["account"] == name]
         if g.empty:
             continue
-        start_eq = float(s.account_cfg(name)["starting_cash"])
+        start_eq, base_day = s.baseline_equity(name, float(g.iloc[-1]["equity"]))
+        bd = s.baseline_date(name)
+        if bd:
+            g = g[g["date"] >= pd.Timestamp(bd)]      # v3: measure from the baseline date
+            if g.empty:
+                continue
         last = g.iloc[-1]
         m = g[g["date"].dt.strftime("%Y-%m") == month]
         prev = g[g["date"] < m["date"].min()] if not m.empty else pd.DataFrame()
         base_m = float(prev.iloc[-1]["equity"]) if len(prev) else start_eq
         ret_m = float(m.iloc[-1]["equity"]) / base_m - 1 if len(m) else float("nan")
         ret_all = float(last["equity"]) / start_eq - 1
-        line = f"  {name:>5}: equity ${float(last['equity']):,.2f}  month {ret_m * 100:+.2f}%  since start {ret_all * 100:+.2f}%"
+        line = f"  {name:>5}: equity ${float(last['equity']):,.2f}  month {ret_m * 100:+.2f}%  since {base_day} {ret_all * 100:+.2f}%"
         if spy is not None and len(g):
             d0, d1 = g.iloc[0]["date"], last["date"]
             sp = spy[(spy.index >= d0)]
